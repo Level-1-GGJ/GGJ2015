@@ -12,7 +12,7 @@ public class MovementController : MonoBehaviour {
         rb.fixedAngle = true;        
 	}
 
-    void Move(Vector2 direction)
+    public void Move(Vector2 direction)
     {
         rb.MovePosition(rb.position + direction);
     }
