@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 [RequireComponent(typeof(MovementController))]
 public class MovingPlatformScript : MonoBehaviour {
-    HashSet<Transform> collisions;
 
     public Vector2[] pointsToVisit;
     public float timeToVisitAllPoints = 1;
@@ -28,7 +27,6 @@ public class MovingPlatformScript : MonoBehaviour {
         lastIndex = 0;
         currentIndex = 1;
         currentDirection = (pointsToVisit[currentIndex] - pointsToVisit[lastIndex]).normalized;
-        collisions = new HashSet<Transform>();
 	}
 
     // Update is called once per frame
