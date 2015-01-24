@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     bool APressed = false;
     bool DPressed = false;
 
-
+    public Vector2 relativeDeathVelocity = new Vector2(-.1f, 4f);
 
 	// Use this for initialization
 	void Start () 
@@ -168,6 +168,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PrepForDeath()
     {
+        mc.SetVelocity(new Vector2(transform.right.x * relativeDeathVelocity.x, relativeDeathVelocity.y));
         canControl = false;
     }
 }
