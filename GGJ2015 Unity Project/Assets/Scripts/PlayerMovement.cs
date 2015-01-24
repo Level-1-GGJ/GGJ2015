@@ -8,11 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 horizontalDistance;
     public Vector2 verticalDistance;
-    public Vector2 jumpDistance;
 
     public bool flying = true;
-
-    public float jumpHeight = 10;
 
 	// Use this for initialization
 	void Start () 

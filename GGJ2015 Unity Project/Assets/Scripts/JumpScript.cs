@@ -1,0 +1,65 @@
+﻿using UnityEngine;
+using System.Collections;
+
+[RequireComponent(typeof(MovementController))]
+public class JumpScript : MonoBehaviour {
+
+    MovementController mc;
+    public float jumpHeight = 10;
+
+    public bool hasDoubleJump = true;
+    public bool canFirstJump = false;
+
+    public bool canJump = false;
+
+    public bool jumpButtonPressed = false;
+
+	// Use this for initialization
+	void Start () {
+        mc = GetComponent<MovementController>();
+	}
+
+    void Update()
+    {
+        if (canJump && !jumpButtonPressed)
+        {
+            jumpButtonPressed = Input.GetButtonDown("Jump");
+        }
+    }
+
+	// Update is called once per frame
+	void FixedUpdate () {
+        if (jumpButtonPressed)
+        {
+            jumpButtonPressed = false;
+            mc.SetVelocityY(0);
+            mc.AddForce(Vector2.up * jumpHeight * 10);
+            if (hasDoubleJump && canFirstJump)
+            {
+                canFirstJump = false;
+            }
+            else
+            {
+                canJump = false;
+            }
+        }
+	}
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Floor"))
+        {
+            canFirstJump = true;
+            canJump = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Floor"))
+        {
+            canFirstJump = false;
+            if (!hasDoubleJump) canJump = false;
+        }
+    }
+}
