@@ -2,9 +2,12 @@
 using System.Collections;
 
 [RequireComponent(typeof(MovementController))]
+[RequireComponent(typeof(PlayerMovement))]
 public class JumpScript : MonoBehaviour {
 
     MovementController mc;
+    PlayerMovement pm;
+
     public float jumpHeight = 10;
 
     public bool hasDoubleJump = true;
@@ -17,6 +20,7 @@ public class JumpScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         mc = GetComponent<MovementController>();
+        pm = GetComponent<PlayerMovement>();
 	}
 
     void Update()
@@ -29,7 +33,7 @@ public class JumpScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-        if (jumpButtonPressed)
+        if (!pm.dashing && jumpButtonPressed)
         {
             jumpButtonPressed = false;
             mc.SetVelocityY(0);

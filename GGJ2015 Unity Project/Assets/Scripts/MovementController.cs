@@ -45,4 +45,14 @@ public class MovementController : MonoBehaviour {
         float vx = rb.velocity.x;
         rb.velocity = new Vector2(vx, vel);
     }
+
+    public void SetVelocityX(float vel)
+    {
+        rb.velocity = new Vector2(vel, rb.velocity.y);
+    }
+
+    public void SetVelocity(Vector2 vel)
+    {
+        rb.velocity = vel;
+    }
 }

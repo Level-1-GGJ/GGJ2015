@@ -6,14 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     MovementController mc;
 
-    public Vector2 horizontalDistance;
-    public Vector2 verticalDistance;
-    public Vector2 jumpDistance;
-    public Vector2 dashDistance;
+    public float speed = .1f;
+    Vector2 horizontalDistance;
+    Vector2 verticalDistance;
+    Vector2 dashDistance;
 
     public bool flying = true;
-
-    public float jumpHeight = 10;
 
     //dashing! variables
     public float resetTimer = .5f;
@@ -21,14 +19,26 @@ public class PlayerMovement : MonoBehaviour
     public float maxDashTime;
     public float dashSpeed;
     int buttonClicks= 0;
-    bool dashing = false;
+    public bool canDash = true;
+    public bool dashing = false;
+
+    bool APressed = false;
+    bool DPressed = false;
 
 	// Use this for initialization
 	void Start () 
     {
         mc = GetComponent<MovementController>();
+        horizontalDistance = Vector2.right * speed;
+        verticalDistance = Vector2.up * speed;
 	}
-	
+
+    void Update()
+    {
+        if (!APressed) APressed = Input.GetKeyDown(KeyCode.A);
+        if (!DPressed) DPressed = Input.GetKeyDown(KeyCode.D);
+    }
+
 	// Update is called once per frame
 	void FixedUpdate () 
     {
@@ -52,10 +62,11 @@ public class PlayerMovement : MonoBehaviour
 
         //The dashing code was helped out by Montraydavis on unity answers
         //if im currently pushing left
-        if (Input.GetKeyDown(KeyCode.A))
+        if (APressed)
         {
+            APressed = false;
             //if the timer is still running from the last push and the button was pushed once
-            if (resetTimer > 0 && buttonClicks == 1)
+            if (canDash && resetTimer > 0 && buttonClicks == 1)
             {
                 Debug.Log("dashing! left");
                 //make the dashing distance be left and at the dash speed
@@ -75,9 +86,10 @@ public class PlayerMovement : MonoBehaviour
             }
         }
             //this is the same as left except right
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (DPressed)
         {
-            if (resetTimer > 0 && buttonClicks == 1)
+            DPressed = false;
+            if (canDash && resetTimer > 0 && buttonClicks == 1)
             {
                 Debug.Log("dashing! right");
                 dashDistance.x = dashSpeed;
@@ -109,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
         if (dashing)
         {
             //force my velocity to the speed
-            mc.Velocity = dashDistance;
+            mc.SetVelocity(dashDistance);
 
             //if i have exceeded the amount of dash time
             if (dashTime > maxDashTime)
@@ -117,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
                 //stop dashing
                 dashing = false;
                 //make my velocity 0/stop dashing
-                mc.Velocity = Vector2.zero;
+                mc.SetVelocity(Vector2.zero);
             }
 
             //otherwise increment the total amount of dashing
