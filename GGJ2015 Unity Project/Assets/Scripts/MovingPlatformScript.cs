@@ -43,17 +43,25 @@ public class MovingPlatformScript : MonoBehaviour {
             }
             currentDirection = (pointsToVisit[currentIndex] - pointsToVisit[lastIndex]).normalized;
         }
-        else
+            //rigidbody2D.MovePosition(rigidbody2D.position + currentDirection * speed);
+        mc.Move(currentDirection * speed);
+        foreach (Transform obj in transform)
         {
-            rigidbody2D.MovePosition(rigidbody2D.position + currentDirection * speed);
+            MovementController mc2 = obj.GetComponent<MovementController>();
+            mc2.SetVelocityX(0);
+            mc2.Move(currentDirection * speed);
+            //mc2.Move(currentDirection * speed);
         }
+        
+        
 	}
 
-    /*void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log("Yay");
         if (Vector2.Dot((col.transform.position - transform.position), Vector2.up) > collider2D.bounds.extents.y / 2)
         {
-            collisions.Add(transform);
+            col.transform.parent = transform;
         }
     }
 
@@ -61,7 +69,7 @@ public class MovingPlatformScript : MonoBehaviour {
     {
         if (col.transform.parent == transform)
         {
-            collisions.Remove(transform);
+            col.transform.parent = null;
         }
-    }*/
+    }
 }
