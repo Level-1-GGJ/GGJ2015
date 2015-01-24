@@ -17,42 +17,48 @@ public class LightSwitcher : MonoBehaviour
     public bool isRed;
 
     MovementController mc;
+    MovingPlatformScript car;
 
 	// Use this for initialization
 	void Start () 
     {
         mc = GetComponent<MovementController>();
+        car = GameObject.FindGameObjectWithTag("Car").GetComponent<MovingPlatformScript>();
         isGreen = true;
+        renderer.material.mainTexture = lights[curLight];
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        if (isGreen)
+        if (car.onCar)
         {
-            if (timePassed > greenTime)
+            if (isGreen)
             {
-                timePassed = 0;
-                curLight++;
+                if (timePassed > greenTime)
+                {
+                    timePassed = 0;
+                    curLight++;
+                }
             }
-        }
-        else if (isYellow)
-        {
-            if (timePassed > yellowTime)
+            else if (isYellow)
             {
-                timePassed = 0;
-                curLight++;
+                if (timePassed > yellowTime)
+                {
+                    timePassed = 0;
+                    curLight++;
+                }
             }
-        }
-        else if (isRed)
-        {
-            if (timePassed > redTime)
+            else if (isRed)
             {
-                timePassed = 0;
-                curLight++;
+                if (timePassed > redTime)
+                {
+                    timePassed = 0;
+                    curLight++;
+                }
             }
+            timePassed += Time.deltaTime;
+            renderer.material.mainTexture = lights[curLight % 3];
         }
-        timePassed += Time.deltaTime;
-        renderer.material.mainTexture = lights[curLight % 3];
 	}
 }

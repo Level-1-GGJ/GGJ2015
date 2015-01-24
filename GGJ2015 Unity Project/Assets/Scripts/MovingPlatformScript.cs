@@ -11,9 +11,10 @@ public class MovingPlatformScript : MonoBehaviour {
     MovementController mc;
     float speed = 0;
     int lastIndex;
-    int currentIndex;
+    public int currentIndex;
     Vector2 currentDirection;
     float dist = 0;
+    public bool onCar = false;
 
 	// Use this for initialization
 	void Start () {
@@ -71,13 +72,17 @@ public class MovingPlatformScript : MonoBehaviour {
         {
             col.transform.parent = transform;
         }
+        onCar = true;
     }
 
     void OnCollisionExit2D(Collision2D col)
     {
+        Debug.Log("left the collider");
+        //onCar = false;
         if (col.transform.parent == transform)
         {
             col.transform.parent = null;
         }
+        
     }
 }

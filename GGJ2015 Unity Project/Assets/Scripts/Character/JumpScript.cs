@@ -51,7 +51,7 @@ public class JumpScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Floor"))
+        if (col.gameObject.CompareTag("Floor") || col.gameObject.CompareTag("Car"))
         {
             canFirstJump = true;
             canJump = true;
@@ -60,7 +60,7 @@ public class JumpScript : MonoBehaviour {
 
     void OnCollisionExit2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Floor"))
+        if (col.gameObject.CompareTag("Floor") || col.gameObject.CompareTag("Car"))
         {
             canFirstJump = false;
             if (!hasDoubleJump) canJump = false;
