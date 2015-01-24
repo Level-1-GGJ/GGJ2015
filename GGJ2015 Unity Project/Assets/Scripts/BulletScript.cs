@@ -16,8 +16,9 @@ public class BulletScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        mc.Move(direction * speed * Time.deltaTime);
+	void FixedUpdate ()
+    {
+        mc.Move(direction * speed);
 	}
 
     public void SetDirection(Vector2 dir)

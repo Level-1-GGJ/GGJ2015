@@ -1,46 +1,52 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(MovementController))]
 public class PlayerMovement : MonoBehaviour 
 {
+    MovementController mc;
+
     public Vector2 horizontalDistance;
     public Vector2 verticalDistance;
     public Vector2 jumpDistance;
 
     public bool flying = true;
 
+    public float jumpHeight = 10;
+
 	// Use this for initialization
 	void Start () 
     {
-	    
+        mc = GetComponent<MovementController>();
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
     {
-	    if(Input.GetKey(KeyCode.W))
+        if (flying)
         {
-            Debug.Log("Moving up");
-            if (flying)
+            mc.GravityAmount = 0;
+            if (Input.GetKey(KeyCode.W))
             {
-                GetComponent<MovementController>().Move(verticalDistance);
+                Debug.Log(mc.Position);
+                mc.Move(verticalDistance);
             }
+            if (Input.GetKey(KeyCode.S))
+            {
+                mc.Move(-verticalDistance);
+            }
+        }
+        else
+        {
+            mc.GravityAmount = 1;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            GetComponent<MovementController>().Move(-horizontalDistance);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            Debug.Log("Moving down");
-            if (flying)
-            {
-                GetComponent<MovementController>().Move(-verticalDistance);
-            }
+            mc.Move(-horizontalDistance);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            GetComponent<MovementController>().Move(horizontalDistance);
+            mc.Move(horizontalDistance);
         }
 	}
 }
