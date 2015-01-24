@@ -13,10 +13,10 @@ public class ShootBulletScript : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-    BulletScript FireBullet(Vector2 direction, Vector2 offsetFromCenterOfGameObject)
+    public BulletScript FireBullet(Vector2 direction, Vector2 offsetFromCenterOfGameObject)
     {
         BulletScript script = ((GameObject)Instantiate(bulletPrefab, rb.position + (Vector2)transform.TransformDirection(offsetFromCenterOfGameObject), Quaternion.identity)).GetComponent<BulletScript>();
-        script.SetDirection(direction);
+        script.Initialize(direction, gameObject.tag);
         return script;
     }
 }
