@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!APressed) APressed = Input.GetKeyDown(KeyCode.A);
         if (!DPressed) DPressed = Input.GetKeyDown(KeyCode.D);
+		flying = Input.GetKey (KeyCode.LeftShift);
     }
 
 	// Update is called once per frame
@@ -51,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (flying)
         {
+			mc.SetVelocityY(0);
             mc.GravityAmount = 0;
             if (Input.GetKey(KeyCode.W))
             {
@@ -162,7 +164,7 @@ public class PlayerMovement : MonoBehaviour
         }
 	}
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionStay2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Floor"))
         {
