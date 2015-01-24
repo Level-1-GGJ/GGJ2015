@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 verticalDistance;
     Vector2 dashDistance;
 
+    public bool canControl = true;
+
     public bool flying = true;
 
     //dashing! variables
@@ -25,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     bool APressed = false;
     bool DPressed = false;
 
-
+    public Vector2 relativeDeathVelocity = new Vector2(-.1f, 4f);
 
 	// Use this for initialization
 	void Start () 
@@ -44,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate () 
     {
+        if (!canControl)
+            return;
+
         if (flying)
         {
             mc.GravityAmount = 0;
@@ -165,4 +170,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void PrepForDeath()
+    {
+        mc.SetVelocity(new Vector2(transform.right.x * relativeDeathVelocity.x, relativeDeathVelocity.y));
+        canControl = false;
+    }
 }
