@@ -126,6 +126,10 @@ public class PlayerMovement : MonoBehaviour
         {
             //force my velocity to the speed
             mc.SetVelocity(dashDistance);
+            if (!flying)
+            {
+                canDash = false;
+            }
 
             //if i have exceeded the amount of dash time
             if (dashTime > maxDashTime)
@@ -157,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Floor"))
         {
-            
+            canDash = true;
         }
     }
 
