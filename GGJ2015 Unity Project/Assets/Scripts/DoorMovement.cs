@@ -35,18 +35,14 @@ public class DoorMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        Debug.Log(openPos + " time: " + panelScript.timePassed);
         if (panelScript.activated && panelScript.timePassed < 12)
         {
-            Debug.Log("where re you going?");
             mc.Move((openPos - new Vector2(transform.position.x, transform.position.y))/12);
 
         }
         else if(!panelScript.activated && panelScript.timePassed < 12)
         {
-            Debug.Log("what about you?");
             mc.Move((closedPos - new Vector2(transform.position.x, transform.position.y))/12);
         }
-        Debug.Log("nothing?");
 	}
 }

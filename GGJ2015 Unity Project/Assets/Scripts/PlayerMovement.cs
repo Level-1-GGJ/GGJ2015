@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     //dashing! variables
     public float resetTimer = .5f;
+	public float cooldownTimer= 1f;
     float dashTime;
     public float maxDashTime;
     public float dashSpeed;
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     bool APressed = false;
     bool DPressed = false;
+	bool lastLeft =false;
 
     public Vector2 relativeDeathVelocity = new Vector2(-.1f, 4f);
 
@@ -76,16 +78,19 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 180, 0);
             APressed = false;
             //if the timer is still running from the last push and the button was pushed once
-            if (canDash && resetTimer > 0 && buttonClicks == 1)
+            if (canDash && resetTimer > 0 && buttonClicks == 1 && !dashing && lastLeft)
             {
-                Debug.Log("dashing! left");
-                //make the dashing distance be left and at the dash speed
-                dashDistance.x = -dashSpeed;
-                //turn on the dashing bool
-                dashing = true;
-                //reset the timer for dashing
-                dashTime = 0;
-            }
+				if(cooldownTimer<0)
+				{
+	             	Debug.Log("dashing! left");
+	             	//make the dashing distance be left and at the dash speed
+	             	dashDistance.x = -dashSpeed;
+	                //turn on the dashing bool
+	                dashing = true;
+	                //reset the timer for dashing
+	                dashTime = 0;
+				}
+           	}
                 //if the second button hasnt been pressed yet
             else
             {
@@ -93,26 +98,33 @@ public class PlayerMovement : MonoBehaviour
                 resetTimer = .5f;
                 //and add one to the number of taps
                 buttonClicks++;
+				//Sets the lastLeft boolean to true for future reference.
             }
+			lastLeft= true;
         }
             //this is the same as left except right
         else if (DPressed)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-            DPressed = false;
-            if (canDash && resetTimer > 0 && buttonClicks == 1)
-            {
-                Debug.Log("dashing! right");
-                dashDistance.x = dashSpeed;
-                dashing = true;
-                dashTime = 0;
-            }
-            else
-            {
-                resetTimer = .5f;
-                buttonClicks++;
-            }
-        }
+	        transform.rotation = Quaternion.Euler(0, 0, 0);
+	        DPressed = false;
+	        if (canDash && resetTimer > 0 && buttonClicks == 1 && !dashing && !lastLeft)
+	        {
+				if(cooldownTimer<0)
+				{
+	            	Debug.Log("dashing! right");
+	            	dashDistance.x = dashSpeed;
+	            	dashing = true;
+	            	dashTime = 0;
+				}
+	         }
+	         else
+	         {
+	             resetTimer = .5f;
+	             buttonClicks++;
+				//Sets the lastLeft boolean to true for future reference.
+	         }
+			lastLeft = false;
+		}
 
         //if the timer is runnning
         if (resetTimer > 0)
@@ -141,8 +153,11 @@ public class PlayerMovement : MonoBehaviour
             //if i have exceeded the amount of dash time
             if (dashTime > maxDashTime)
             {
+				Debug.Log("SHIT IS OCCURING");
                 //stop dashing
                 dashing = false;
+				//Resetting the cooldown to begin counting down again.
+				cooldownTimer=1f;
                 //make my velocity 0/stop dashing
                 mc.SetVelocity(Vector2.zero);
             }
@@ -162,6 +177,8 @@ public class PlayerMovement : MonoBehaviour
                 mc.Move(horizontalDistance);
             }
         }
+
+		cooldownTimer -= 1 * Time.deltaTime;
 	}
 
     void OnCollisionStay2D(Collision2D col)
