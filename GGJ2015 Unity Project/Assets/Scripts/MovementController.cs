@@ -45,4 +45,14 @@ public class MovementController : MonoBehaviour {
     {
         rb.AddForce(force);
     }
+
+    public void disableGravity()
+    {
+        GravityAmount = 0;
+    }
+
+    public void enableGravity()
+    {
+        GravityAmount = 1;
+    }
 }
