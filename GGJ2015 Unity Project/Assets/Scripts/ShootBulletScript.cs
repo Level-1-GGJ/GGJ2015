@@ -15,10 +15,10 @@ public class ShootBulletScript : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-    public RandomText FireBullet(Vector2 direction, Vector2 offsetFromCenterOfGameObject)
+    public RandomText FireBullet(Vector2 direction, Vector2 offsetFromCenterOfGameObject, bool goodBad)
     {
         RandomText script = ((GameObject)Instantiate(bulletPrefab, rb.position + (Vector2)transform.TransformDirection(offsetFromCenterOfGameObject), Quaternion.identity)).GetComponent<RandomText>();
-        script.Initialize(textState, direction, ignoreTags);
+        script.Initialize(textState, direction, goodBad);
         return script;
     }
 }

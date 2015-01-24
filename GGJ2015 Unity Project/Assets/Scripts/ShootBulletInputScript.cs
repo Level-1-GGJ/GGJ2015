@@ -17,7 +17,7 @@ public class ShootBulletInputScript : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Fire1"))
         {
-            shooter.FireBullet(transform.right, relativeFirePosition);
+            shooter.FireBullet(transform.right, relativeFirePosition, true);
         }
 	}
 }

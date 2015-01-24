@@ -32,9 +32,9 @@ public class RandomText : MonoBehaviour {
     public float textSpeed;
 
     /// <summary>
-    /// The tags that we can ignore when checking for collision
+    /// Determines whether the thought is positive or negative
     /// </summary>
-    public string[] ignoreTags;
+    public bool isPositive;
 
     /// <summary>
     /// The direction that this object is travelling in
@@ -53,6 +53,7 @@ public class RandomText : MonoBehaviour {
         mc.IsKinematic = true;
         this.GetComponent<TextMesh>().text = setText();
         gameObject.AddComponent<BoxCollider2D>().isTrigger = true;
+        Destroy(gameObject, 3f);
     }
 
     /// <summary>
@@ -60,7 +61,7 @@ public class RandomText : MonoBehaviour {
     /// </summary>
     /// <param name="myLocation">The location the thought is being spawned.</param>
     /// <param name="textSpeed">Tracks the speed at which the text moves each fixedUpdate.  Negative moves left.</param>
-    public void Initialize(TextState myLocation, Vector2 direction, string[] ignoreStrings)
+    public void Initialize(TextState myLocation, Vector2 direction, bool isPositive)
     {
         this.direction = direction.normalized;
 
@@ -74,7 +75,7 @@ public class RandomText : MonoBehaviour {
         }
 
         this.myLocation = myLocation;
-        ignoreTags = ignoreStrings;
+        this.isPositive = isPositive;
     }
 	
 	// Fixed Update for movement
@@ -105,10 +106,10 @@ public class RandomText : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        for (int i = 0; i < ignoreTags.Length; i++)
+        RandomText text;
+        if ((text = col.GetComponent<RandomText>()) && text.isPositive != isPositive)
         {
-            if (!col.CompareTag(ignoreTags[i]))
-                Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
