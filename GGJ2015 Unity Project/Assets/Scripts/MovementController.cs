@@ -40,20 +40,9 @@ public class MovementController : MonoBehaviour {
         rb.AddForce(force);
     }
 
-<<<<<<< HEAD
-    public void disableGravity()
-    {
-        GravityAmount = 0;
-    }
-
-    public void enableGravity()
-    {
-        GravityAmount = 1;
-=======
     public void SetVelocityY(float vel)
     {
         float vx = rb.velocity.x;
         rb.velocity = new Vector2(vx, vel);
->>>>>>> 6fb399d5e772acba2f0949b42eaff87bd007f0a8
     }
 }

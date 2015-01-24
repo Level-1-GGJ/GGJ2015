@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 horizontalDistance;
     public Vector2 verticalDistance;
-<<<<<<< HEAD
     public Vector2 jumpDistance;
     public Vector2 dashDistance;
 
@@ -24,11 +23,6 @@ public class PlayerMovement : MonoBehaviour
     int buttonClicks= 0;
     bool dashing = false;
 
-=======
-
-    public bool flying = true;
-
->>>>>>> 6fb399d5e772acba2f0949b42eaff87bd007f0a8
 	// Use this for initialization
 	void Start () 
     {
@@ -40,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (flying)
         {
-            mc.disableGravity();
+            mc.GravityAmount = 0;
             if (Input.GetKey(KeyCode.W))
             {
                 Debug.Log(mc.Position);
@@ -53,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            mc.enableGravity();
+            mc.GravityAmount = 1;
         }
 
         //The dashing code was helped out by Montraydavis on unity answers
