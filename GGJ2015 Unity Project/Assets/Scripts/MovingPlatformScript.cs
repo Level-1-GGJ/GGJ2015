@@ -53,14 +53,12 @@ public class MovingPlatformScript : MonoBehaviour {
             }
             currentDirection = (pointsToVisit[currentIndex] - pointsToVisit[lastIndex]).normalized;
         }
-            //rigidbody2D.MovePosition(rigidbody2D.position + currentDirection * speed);
         mc.Move(currentDirection * speed);
         foreach (Transform obj in transform)
         {
             MovementController mc2 = obj.GetComponent<MovementController>();
             mc2.SetVelocityX(0);
             mc2.Move(currentDirection * speed);
-            //mc2.Move(currentDirection * speed);
         }
         
         
