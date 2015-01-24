@@ -23,12 +23,6 @@ public class MovementController : MonoBehaviour {
         set { rb.gravityScale = value; }
     }
 
-    public Vector2 Velocity
-    {
-        get { return rigidbody2D.velocity; }
-        set { rigidbody2D.velocity = value; } 
-    }
-
 	// Use this for initialization
 	void Start () {
         rb = rigidbody2D;
@@ -46,6 +40,7 @@ public class MovementController : MonoBehaviour {
         rb.AddForce(force);
     }
 
+<<<<<<< HEAD
     public void disableGravity()
     {
         GravityAmount = 0;
@@ -54,5 +49,11 @@ public class MovementController : MonoBehaviour {
     public void enableGravity()
     {
         GravityAmount = 1;
+=======
+    public void SetVelocityY(float vel)
+    {
+        float vx = rb.velocity.x;
+        rb.velocity = new Vector2(vx, vel);
+>>>>>>> 6fb399d5e772acba2f0949b42eaff87bd007f0a8
     }
 }
