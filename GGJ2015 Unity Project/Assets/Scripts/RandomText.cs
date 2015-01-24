@@ -51,8 +51,6 @@ public class RandomText : MonoBehaviour {
     {
         mc = GetComponent<MovementController>();
         mc.IsKinematic = true;
-        this.GetComponent<TextMesh>().text = setText();
-        gameObject.AddComponent<BoxCollider2D>().isTrigger = true;
         Destroy(gameObject, 3f);
     }
 
@@ -76,6 +74,9 @@ public class RandomText : MonoBehaviour {
 
         this.myLocation = myLocation;
         this.isPositive = isPositive;
+
+        this.GetComponent<TextMesh>().text = SetText().ToUpper();
+        gameObject.AddComponent<BoxCollider2D>().isTrigger = true;
     }
 	
 	// Fixed Update for movement
@@ -86,21 +87,96 @@ public class RandomText : MonoBehaviour {
     /// <summary>
     /// Randomly returns text out of the appropriate dictionary.
     /// </summary>
-    private string setText()
+    private string SetText()
     {
-        switch(myLocation)
+        // Happy text
+        if(isPositive)
         {
-            case TextState.Bar:
-                return "test";
+            switch(Application.loadedLevel - 1)
+            {
+                case 0:
+                    return TextDictionary.generalHappy0[Random.Range(0, TextDictionary.generalHappy0.Count)];
+                case 1:
+                    return TextDictionary.generalHappy1[Random.Range(0, TextDictionary.generalHappy1.Count)];
+                case 2:
+                    return TextDictionary.generalHappy2[Random.Range(0, TextDictionary.generalHappy2.Count)];
+                case 3:
+                    return TextDictionary.generalHappy3[Random.Range(0, TextDictionary.generalHappy3.Count)];
+            }
+        }
 
-            case TextState.Car:
-                return "test";
+        // The rest of this text is negative
+        switch (Application.loadedLevel - 1)
+        {
+            case 0:
+                switch(myLocation)
+                {
+                    case TextState.Office:
+                        return TextDictionary.jobNegative0[Random.Range(0, TextDictionary.jobNegative0.Count)];
+                    default:
+                        return TextDictionary.generalNegative0[Random.Range(0, TextDictionary.generalNegative0.Count)];
+                } 
 
-            case TextState.Office:
-                return "test";
+            case 1:
+                switch (myLocation)
+                {
+                    case TextState.Office:
+                        return TextDictionary.jobNegative1[Random.Range(0, TextDictionary.jobNegative1.Count)];
+                    default:
+                        return TextDictionary.generalNegative1[Random.Range(0, TextDictionary.generalNegative1.Count)];
+                }
 
+            case 2:
+                switch (myLocation)
+                {
+                    case TextState.Office:
+                        return TextDictionary.jobNegative2[Random.Range(0, TextDictionary.jobNegative2.Count)];
+                    case TextState.Car:
+                        return TextDictionary.carNegative2[Random.Range(0, TextDictionary.carNegative2.Count)];
+                    default:
+                        return TextDictionary.generalNegative2[Random.Range(0, TextDictionary.generalNegative2.Count)];
+                }
+
+            case 3:
+                switch (myLocation)
+                {
+                    case TextState.Office:
+                        return TextDictionary.jobNegative3[Random.Range(0, TextDictionary.jobNegative3.Count)];
+                    case TextState.Car:
+                        return TextDictionary.carNegative3[Random.Range(0, TextDictionary.carNegative3.Count)];
+                    case TextState.Bar:
+                        return TextDictionary.barNegative3[Random.Range(0, TextDictionary.barNegative3.Count)];
+                    default:
+                        return TextDictionary.generalNegative3[Random.Range(0, TextDictionary.generalNegative3.Count)];
+                }
+            case 4:
+                switch (myLocation)
+                {
+                    case TextState.Office:
+                        return TextDictionary.jobNegative4[Random.Range(0, TextDictionary.jobNegative4.Count)];
+                    case TextState.Car:
+                        return TextDictionary.carNegative4[Random.Range(0, TextDictionary.carNegative4.Count)];
+                    case TextState.Bar:
+                        return TextDictionary.barNegative4[Random.Range(0, TextDictionary.barNegative4.Count)];
+                    default:
+                        return TextDictionary.generalNegative4[Random.Range(0, TextDictionary.generalNegative4.Count)];
+                }
+            case 5:
+                switch (myLocation)
+                {
+                    case TextState.Office:
+                        return TextDictionary.jobNegative5[Random.Range(0, TextDictionary.jobNegative5.Count)];
+                    case TextState.Car:
+                        return TextDictionary.carNegative5[Random.Range(0, TextDictionary.carNegative5.Count)];
+                    case TextState.Bar:
+                        return TextDictionary.barNegative5[Random.Range(0, TextDictionary.barNegative5.Count)];
+                    default:
+                        return TextDictionary.generalNegative5[Random.Range(0, TextDictionary.generalNegative5.Count)];
+                }
+            case 6:
+                return TextDictionary.generalNegative6[Random.Range(0, TextDictionary.generalNegative6.Count)];
             default:
-                return "test";
+                return "ERROR";
         }
     }
 
