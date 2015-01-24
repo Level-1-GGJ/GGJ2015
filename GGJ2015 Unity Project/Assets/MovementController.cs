@@ -6,18 +6,29 @@ public class MovementController : MonoBehaviour {
 
     Rigidbody2D rb;
 
+    public Vector2 Position
+    {
+        get { return rb.position; }
+    }
+
+    public bool IsKinematic
+    {
+        get { return rb.isKinematic; }
+        set { rb.isKinematic = value; }
+    }
+
 	// Use this for initialization
 	void Start () {
         rb = rigidbody2D;
         rb.fixedAngle = true;        
 	}
 
-    void Move(Vector2 direction)
+    public void Move(Vector2 direction)
     {
         rb.MovePosition(rb.position + direction);
     }
 
-    void AddForce(Vector2 force)
+    public void AddForce(Vector2 force)
     {
         rb.AddForce(force);
     }
