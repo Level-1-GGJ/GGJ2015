@@ -10,7 +10,7 @@ public class LightSwitcher : MonoBehaviour
     public float redTime;
 
     float timePassed = 0;
-    int curLight = 0;
+    public int curLight = 0;
 
     public bool isGreen;
     public bool isYellow;
