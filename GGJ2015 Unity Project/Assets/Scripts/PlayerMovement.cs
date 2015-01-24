@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     bool APressed = false;
     bool DPressed = false;
 
+
+
 	// Use this for initialization
 	void Start () 
     {
@@ -64,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
         //if im currently pushing left
         if (APressed)
         {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
             APressed = false;
             //if the timer is still running from the last push and the button was pushed once
             if (canDash && resetTimer > 0 && buttonClicks == 1)
@@ -88,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
             //this is the same as left except right
         else if (DPressed)
         {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             DPressed = false;
             if (canDash && resetTimer > 0 && buttonClicks == 1)
             {
@@ -148,4 +152,13 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 	}
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Floor"))
+        {
+            
+        }
+    }
+
 }
