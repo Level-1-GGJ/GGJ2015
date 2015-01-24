@@ -13,7 +13,6 @@ public class DoorMovement : MonoBehaviour
     public Vector2 moveDist;
 
     public float speed;
-
 	// Use this for initialization
 	void Start () 
     {
@@ -33,16 +32,23 @@ public class DoorMovement : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
     {
-        if (panelScript.activated && panelScript.timePassed < 12)
+        if (panelScript.activated)
         {
-            mc.Move((openPos - new Vector2(transform.position.x, transform.position.y))/12);
-
+            mc.Move(Vector2.up * speed);
+			if(mc.Position.y > openPos.y)
+			{
+				mc.Position = openPos;
+			}
         }
-        else if(!panelScript.activated && panelScript.timePassed < 12)
+        else if(!panelScript.activated)
         {
-            mc.Move((closedPos - new Vector2(transform.position.x, transform.position.y))/12);
+            mc.Move(-Vector2.up * speed);
+			if(mc.Position.y < closedPos.y)
+			{
+				mc.Position = closedPos;
+			}
         }
 	}
 }

@@ -9,26 +9,51 @@ public class PanelInteraction : MonoBehaviour
     public GameObject player;
     public GameObject door;
     public float timePassed;
-
+	public bool overdrive;
+    bool keyPressed = false;
 	// Use this for initialization
 	void Start () 
     {
         playerMC = player.GetComponent<MovementController>();
 	}
-	
+
+    void Update()
+    {
+        if (!keyPressed) keyPressed = Input.GetKeyDown(KeyCode.E);
+    }
+
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
     {
         Vector2 dist = playerMC.Position - new Vector2(transform.position.x, transform.position.y);
-        if (dist.magnitude < 5)
+        if (overdrive)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (keyPressed)
             {
                 activated = !activated;
                 timePassed = 0;
+                keyPressed = false;
             }
         }
 
         timePassed++;
 	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.CompareTag ("Player"))
+		{
+			overdrive = true;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D col)
+	{
+		if (col.CompareTag ("Player"))
+		{
+			overdrive = false;
+		}
+	}
+
+
 }

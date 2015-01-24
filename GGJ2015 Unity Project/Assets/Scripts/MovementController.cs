@@ -9,6 +9,7 @@ public class MovementController : MonoBehaviour {
     public Vector2 Position
     {
         get { return rb.position; }
+		set { rb.position = value; }
     }
 
     public bool IsKinematic
