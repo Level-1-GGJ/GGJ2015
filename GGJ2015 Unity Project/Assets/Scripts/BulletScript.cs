@@ -8,7 +8,7 @@ public class BulletScript : MonoBehaviour {
 
     MovementController mc;
     Vector2 direction;
-    string ignoreTag;
+    public string ignoreTag;
 
 	// Use this for initialization
 	void Start () {

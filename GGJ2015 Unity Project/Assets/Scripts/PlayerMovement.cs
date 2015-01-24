@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 verticalDistance;
     Vector2 dashDistance;
 
+    public bool canControl = true;
+
     public bool flying = true;
 
     //dashing! variables
@@ -44,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate () 
     {
+        if (!canControl)
+            return;
+
         if (flying)
         {
             mc.GravityAmount = 0;
@@ -161,4 +166,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void PrepForDeath()
+    {
+        canControl = false;
+    }
 }
