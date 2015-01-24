@@ -4,7 +4,9 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody2D))]
 public class ShootBulletScript : MonoBehaviour {
 
+    public TextState textState;
     public GameObject bulletPrefab;
+    public string[] ignoreTags;
     Rigidbody2D rb;
 
     void Start()
@@ -13,10 +15,10 @@ public class ShootBulletScript : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-    public BulletScript FireBullet(Vector2 direction, Vector2 offsetFromCenterOfGameObject)
+    public RandomText FireBullet(Vector2 direction, Vector2 offsetFromCenterOfGameObject)
     {
-        BulletScript script = ((GameObject)Instantiate(bulletPrefab, rb.position + (Vector2)transform.TransformDirection(offsetFromCenterOfGameObject), Quaternion.identity)).GetComponent<BulletScript>();
-        script.Initialize(direction, gameObject.tag);
+        RandomText script = ((GameObject)Instantiate(bulletPrefab, rb.position + (Vector2)transform.TransformDirection(offsetFromCenterOfGameObject), Quaternion.identity)).GetComponent<RandomText>();
+        script.Initialize(textState, direction, ignoreTags);
         return script;
     }
 }

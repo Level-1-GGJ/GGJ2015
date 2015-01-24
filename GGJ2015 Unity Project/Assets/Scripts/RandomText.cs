@@ -15,8 +15,10 @@ public enum TextState
 
 /// <summary>
 /// Instantiates a random text object that will fly across the screen.  Randomly chooses the text from one of several lists.
-/// Created by Luna Meier.
+/// Created by Luna Meier and Samuel Sternklar
 /// </summary>
+[RequireComponent(typeof(TextMesh))]
+[RequireComponent(typeof(MovementController))]
 public class RandomText : MonoBehaviour {
 
     /// <summary>
@@ -30,29 +32,54 @@ public class RandomText : MonoBehaviour {
     public float textSpeed;
 
     /// <summary>
-    /// Tracks whether the feeling is Positive or Negative
+    /// The tags that we can ignore when checking for collision
     /// </summary>
-    public bool isPositive;
+    public string[] ignoreTags;
+
+    /// <summary>
+    /// The direction that this object is travelling in
+    /// </summary>
+    public Vector2 direction;
+
+    /// <summary>
+    /// The movement controller on this object
+    /// </summary>
+    MovementController mc;
+
+    //Start function
+    public void Start()
+    {
+        mc = GetComponent<MovementController>();
+        mc.IsKinematic = true;
+        this.GetComponent<TextMesh>().text = setText();
+        gameObject.AddComponent<BoxCollider2D>().isTrigger = true;
+    }
 
     /// <summary>
     /// Initializes the text box.
     /// </summary>
     /// <param name="myLocation">The location the thought is being spawned.</param>
-    /// <param name="isPositive">Tracks whether the feeling is Positive or Negative.  True == positive.</param>
-    /// /// <param name="textSpeed">Tracks the speed at which the text moves each fixedUpdate.  Negative moves left.</param>
-    public void Initialize(TextState myLocation, bool isPositive, float textSpeed)
+    /// <param name="textSpeed">Tracks the speed at which the text moves each fixedUpdate.  Negative moves left.</param>
+    public void Initialize(TextState myLocation, Vector2 direction, string[] ignoreStrings)
     {
-        this.myLocation = myLocation;
-        this.isPositive = isPositive;
-        this.textSpeed = textSpeed;
+        this.direction = direction.normalized;
 
-        this.GetComponent<TextMesh>().text = setText();
-        this.gameObject.AddComponent<BoxCollider2D>();
+        if (direction != Vector2.zero)
+        {
+            if (direction.x < 0)
+            {
+                direction *= -1;
+            }
+            transform.right = direction;
+        }
+
+        this.myLocation = myLocation;
+        ignoreTags = ignoreStrings;
     }
 	
 	// Fixed Update for movement
 	void FixedUpdate () {
-        this.transform.position += new Vector3(textSpeed, 0, 0);
+        mc.Move(direction * textSpeed);
 	}
 
     /// <summary>
@@ -73,6 +100,15 @@ public class RandomText : MonoBehaviour {
 
             default:
                 return "test";
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        for (int i = 0; i < ignoreTags.Length; i++)
+        {
+            if (!col.CompareTag(ignoreTags[i]))
+                Destroy(gameObject);
         }
     }
 }
