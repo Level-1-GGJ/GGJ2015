@@ -13,17 +13,18 @@ public class MovingPlatformScript : MonoBehaviour {
     int lastIndex;
     int currentIndex;
     Vector2 currentDirection;
+    float dist = 0;
 
 	// Use this for initialization
 	void Start () {
         mc = GetComponent<MovementController>();
-        float dist = 0;
+        
         dist += (pointsToVisit[0] - pointsToVisit[pointsToVisit.Length - 1]).magnitude;
         for (int i = 1; i < pointsToVisit.Length; i++)
         {
             dist += (pointsToVisit[i] - pointsToVisit[i - 1]).magnitude;
         }
-        speed = (dist / timeToVisitAllPoints) * Time.fixedDeltaTime;
+        
         lastIndex = 0;
         currentIndex = 1;
         currentDirection = (pointsToVisit[currentIndex] - pointsToVisit[lastIndex]).normalized;
@@ -32,6 +33,15 @@ public class MovingPlatformScript : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (timeToVisitAllPoints != 0)
+        {
+            speed = (dist / timeToVisitAllPoints) * Time.fixedDeltaTime;
+        }
+        else
+        {
+            speed = 0;
+        }
+
         if (Vector2.Dot(pointsToVisit[currentIndex] - mc.Position, currentDirection) < 0)
         {
             rigidbody2D.MovePosition(pointsToVisit[currentIndex]);
