@@ -9,7 +9,7 @@ public class PanelInteraction : MonoBehaviour
     public GameObject player;
     public GameObject door;
     public float timePassed;
-	public bool overdrive;
+	public bool canUse;
     bool keyPressed = false;
 	// Use this for initialization
 	void Start () 
@@ -25,8 +25,7 @@ public class PanelInteraction : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate () 
     {
-        Vector2 dist = playerMC.Position - new Vector2(transform.position.x, transform.position.y);
-        if (overdrive)
+        if (canUse)
         {
             if (keyPressed)
             {
@@ -43,7 +42,7 @@ public class PanelInteraction : MonoBehaviour
 	{
 		if (col.CompareTag ("Player"))
 		{
-			overdrive = true;
+			canUse = true;
 		}
 	}
 
@@ -51,7 +50,7 @@ public class PanelInteraction : MonoBehaviour
 	{
 		if (col.CompareTag ("Player"))
 		{
-			overdrive = false;
+			canUse = false;
 		}
 	}
 
