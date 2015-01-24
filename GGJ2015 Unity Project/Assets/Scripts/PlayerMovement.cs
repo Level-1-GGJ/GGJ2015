@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Jump : MonoBehaviour 
+public class PlayerMovement : MonoBehaviour 
 {
     public Vector2 horizontalDistance;
     public Vector2 verticalDistance;
