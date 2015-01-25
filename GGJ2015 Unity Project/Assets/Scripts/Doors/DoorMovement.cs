@@ -6,7 +6,7 @@ public class DoorMovement : MonoBehaviour
 {
     public PanelInteraction panelScript;
     public GameObject panel;
-    public MovementController mc;
+    MovementController mc;
 
     public Vector2 openPos;
     public Vector2 closedPos;
