@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool APressed = false;
     public bool DPressed = false;
+    public bool shifting = false;
 	bool lastLeft =false;
 
     public Vector2 relativeDeathVelocity = new Vector2(-.1f, 4f);
@@ -47,7 +48,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!APressed) APressed = Input.GetKeyDown(KeyCode.A);
         if (!DPressed) DPressed = Input.GetKeyDown(KeyCode.D);
-		flying = Input.GetKey (KeyCode.LeftShift);
+        if (!shifting) shifting = Input.GetKeyDown(KeyCode.LeftShift);
+		flying = Input.GetKey (KeyCode.LeftControl);
     }
 
 	// Update is called once per frame
@@ -82,10 +84,11 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 180, 0);
             APressed = false;
             //if the timer is still running from the last push and the button was pushed once
-            if (canDash && resetTimer > 0 && buttonClicks == 1 && !dashing && lastLeft)
+            if (canDash && !dashing && shifting)
             {
 				if(cooldownTimer<0)
 				{
+                    shifting = false;
 	             	//make the dashing distance be left and at the dash speed
 	             	dashDistance.x = -dashSpeed;
 	                //turn on the dashing bool
@@ -110,10 +113,11 @@ public class PlayerMovement : MonoBehaviour
         {
 	        transform.rotation = Quaternion.Euler(0, 0, 0);
 	        DPressed = false;
-	        if (canDash && resetTimer > 0 && buttonClicks == 1 && !dashing && !lastLeft)
+	        if (canDash && !dashing && shifting)
 	        {
 				if(cooldownTimer<0)
 				{
+                    shifting = false;
 	            	dashDistance.x = dashSpeed;
 	            	dashing = true;
 	            	dashTime = 0;
@@ -158,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
                 //stop dashing
                 dashing = false;
 				//Resetting the cooldown to begin counting down again.
-				cooldownTimer=cooldownTimerValue;
+                cooldownTimer = cooldownTimerValue;
                 //make my velocity 0/stop dashing
                 mc.SetVelocity(Vector2.zero);
             }
