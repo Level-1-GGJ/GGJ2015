@@ -16,23 +16,25 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (player)
+        if (!camResetStarted)
         {
-            Debug.Log(Vector2.Distance(player.transform.position, transform.position));
-            if (Vector2.Distance(player.transform.position, transform.position) > maxDistanceFromPlayer && !camResetStarted)
+            if (player)
             {
-                camResetStarted = true;
-                StopAllCoroutines();
-                StartCoroutine(CameraReset());
+                if (Vector2.Distance(player.transform.position, transform.position) > maxDistanceFromPlayer)
+                {
+                    camResetStarted = true;
+                    StopAllCoroutines();
+                    StartCoroutine(CameraReset());
+                }
+                else
+                {
+                    transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10) + (Vector3)offset;
+                }
             }
             else
             {
-                transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10) + (Vector3)offset;
+                player = GameObject.FindWithTag("Player");
             }
-        }
-        else
-        {
-            player = GameObject.FindWithTag("Player");
         }
 	}
 
@@ -47,30 +49,24 @@ public class CameraController : MonoBehaviour {
 
     IEnumerator FadeInCoroutine(float speed)
     {
-        Debug.Log("Entered Coroutine");
         Color color = fadeViewBlocker.renderer.material.color;
         while (color.a > 0)
         {
             yield return new WaitForFixedUpdate();
             color.a -= speed;
             fadeViewBlocker.renderer.material.color = color;
-
-            Debug.Log(fadeViewBlocker.renderer.material.color = color);
         }
         yield break;
     }
 
     IEnumerator FadeOutCoroutine(float speed)
     {
-        Debug.Log("Entered Coroutine");
         Color color = fadeViewBlocker.renderer.material.color;
         while (color.a < 1)
         {
             yield return new WaitForFixedUpdate();
             color.a += speed;
             fadeViewBlocker.renderer.material.color = color;
-
-            Debug.Log(fadeViewBlocker.renderer.material.color = color);
         }
         yield break;
     }
