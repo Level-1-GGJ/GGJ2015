@@ -140,5 +140,10 @@ public class PaperStack : MonoBehaviour
             
         }
     }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        this.rigidbody2D.isKinematic = true;
+    }
 }
 
