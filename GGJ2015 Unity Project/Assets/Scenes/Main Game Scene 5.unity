@@ -17587,7 +17587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5c8ef3f83cd8749865bc60520a39e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 30
+  jumpHeight: 40
   hasDoubleJump: 0
   canFirstJump: 0
   canJump: 0
@@ -17617,6 +17617,8 @@ MonoBehaviour:
   APressed: 0
   DPressed: 0
   shifting: 0
+  canFly: 0
+  canActuallyDash: 1
   relativeDeathVelocity: {x: -.100000001, y: 4}
 --- !u!114 &790663166
 MonoBehaviour:
@@ -19825,6 +19827,10 @@ Prefab:
     - target: {fileID: 11460354, guid: edbde70256eb3844d80432d287aab69d, type: 2}
       propertyPath: hasDoubleJump
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460352, guid: edbde70256eb3844d80432d287aab69d, type: 2}
+      propertyPath: canActuallyDash
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11474194, guid: edbde70256eb3844d80432d287aab69d, type: 2}

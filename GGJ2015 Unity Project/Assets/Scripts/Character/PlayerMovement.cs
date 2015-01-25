@@ -32,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
     public bool shifting = false;
 	bool lastLeft =false;
 
+    public bool canFly;
+    public bool canActuallyDash;
+
     public Vector2 relativeDeathVelocity = new Vector2(-.1f, 4f);
 
 	// Use this for initialization
@@ -59,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         if (!canControl)
             return;
 
-        if (flying)
+        if (flying && canFly)
         {
 			mc.SetVelocityY(0);
             mc.GravityAmount = 0;
@@ -84,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 180, 0);
             APressed = false;
             //if the timer is still running from the last push and the button was pushed once
-            if (canDash && !dashing && shifting)
+            if (canDash && !dashing && shifting && canActuallyDash)
             {
 				if(cooldownTimer<0)
 				{
@@ -113,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
         {
 	        transform.rotation = Quaternion.Euler(0, 0, 0);
 	        DPressed = false;
-	        if (canDash && !dashing && shifting)
+	        if (canDash && !dashing && shifting && canActuallyDash)
 	        {
 				if(cooldownTimer<0)
 				{

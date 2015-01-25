@@ -28,7 +28,7 @@ public class PlayerAnimator : MonoBehaviour {
         {
             anim.Play("Death");
         }
-        else if (pm.flying)
+        else if (pm.flying && pm.canFly)
         {
             anim.Play("Flight");
         }
@@ -37,7 +37,7 @@ public class PlayerAnimator : MonoBehaviour {
             anim.Play("Protection");
             book.SetActive(true);
         }
-        else if (pm.dashing)
+        else if (pm.dashing && pm.canActuallyDash)
         {
             anim.Play("Dash");
         }
