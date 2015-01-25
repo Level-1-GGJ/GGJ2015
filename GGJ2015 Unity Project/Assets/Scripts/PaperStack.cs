@@ -10,6 +10,8 @@ public class PaperStack : MonoBehaviour
     /// </summary>
     public float yStart = 20.0f;
 
+    private float initialX;
+
     /// <summary>
     /// Velocity that the object is set to when it starts falling.
     /// </summary>
@@ -55,6 +57,8 @@ public class PaperStack : MonoBehaviour
     /// </summary>
     public void Initialize(string instructions)
     {
+        initialX = this.transform.position.x;
+
         myInstructions = new List<float>();
 
         // Split the string up to get the individual portions
@@ -134,7 +138,7 @@ public class PaperStack : MonoBehaviour
             // Make SURE it's kinematic
             this.rigidbody2D.isKinematic = true;
             // Move it back to starting position
-            this.transform.position = new Vector3(this.transform.position.x, yStart, this.transform.position.z);
+            this.transform.position = new Vector3(initialX, yStart, this.transform.position.z);
             // Done fading
             fade = false;
             

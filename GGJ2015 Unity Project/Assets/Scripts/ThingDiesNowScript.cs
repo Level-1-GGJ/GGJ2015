@@ -36,6 +36,15 @@ public class ThingDiesNowScript : MonoBehaviour {
         }
     }
 
+    public void GotHit()
+    {
+        if (!invuln)
+        {
+            SendMessage("PrepForDeath", SendMessageOptions.DontRequireReceiver);
+            Invoke("Die", deathTimer);
+        }
+    }
+
     void Die()
     {
         Destroy(gameObject);
