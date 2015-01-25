@@ -3,7 +3,7 @@ using System.Collections;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class LevelEndManager : MonoBehaviour {
-
+    public string nextScene;
 	// Use this for initialization
 	void Start () {
         collider2D.isTrigger = true;
@@ -22,6 +22,6 @@ public class LevelEndManager : MonoBehaviour {
     {
         CameraController cameraController = Camera.main.GetComponent<CameraController>();
         yield return cameraController.StartCoroutine(cameraController.FadeOutCoroutine(.02f));
-        Application.LoadLevel(Application.loadedLevel + 1);
+        Application.LoadLevel(nextScene);
     }
 }
