@@ -3034,6 +3034,7 @@ MonoBehaviour:
   dashing: 0
   APressed: 0
   DPressed: 0
+  shifting: 0
   relativeDeathVelocity: {x: -.100000001, y: 4}
 --- !u!114 &11460354
 MonoBehaviour:
@@ -3046,7 +3047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5c8ef3f83cd8749865bc60520a39e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 30
+  jumpHeight: 40
   hasDoubleJump: 1
   canFirstJump: 0
   canJump: 0
