@@ -58,8 +58,11 @@ public class MovingPlatformScript : MonoBehaviour {
         foreach (Transform obj in transform)
         {
             MovementController mc2 = obj.GetComponent<MovementController>();
-            mc2.SetVelocityX(0);
-            mc2.Move(currentDirection * speed);
+            if (mc2)
+            {
+                mc2.SetVelocityX(0);
+                mc2.Move(currentDirection * speed);
+            }
         }
         
         
