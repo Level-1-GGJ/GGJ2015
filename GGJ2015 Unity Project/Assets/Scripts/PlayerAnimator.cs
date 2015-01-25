@@ -18,6 +18,7 @@ public class PlayerAnimator : MonoBehaviour {
         pm = GetComponent<PlayerMovement>();
         tdns = GetComponent<ThingDiesNowScript>();
         anim = GetComponentInChildren<Animation>();
+        anim["Idle"].speed = .1f;
 	}
 	
 	// Update is called once per frame
