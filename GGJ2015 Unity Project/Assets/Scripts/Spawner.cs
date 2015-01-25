@@ -4,15 +4,15 @@ using System.Collections;
 [RequireComponent(typeof(ShootBulletScript))]
 public class Spawner : MonoBehaviour {
 
+    [HideInInspector]
     public Spawner sharedInstance;
     ShootBulletScript shoot;
-
-    public GameObject prefab;
     public int frequency;
-    public float screenWidthInUnits;
-    public float lowerScreenY;
-    public float upperScreenY;
+    float screenWidthInUnits;
+    float lowerScreenY;
+    float upperScreenY;
 
+    [HideInInspector]
     public GameObject player;
 
     void Awake()
@@ -39,7 +39,7 @@ public class Spawner : MonoBehaviour {
             upperScreenY = (Screen.height / 100f);
             lowerScreenY = -upperScreenY;
             RandomText t = shoot.FireBullet(player.transform.position, -Vector2.right, new Vector2(screenWidthInUnits, Random.Range(lowerScreenY, upperScreenY)), false);
-            t.textSpeed = .2f;
+            t.textSpeed = .05f;
             t.tag = "Deadly";
         }
 	}

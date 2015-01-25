@@ -45,7 +45,7 @@ public class CameraController : MonoBehaviour {
         yield break;
     }
 
-    IEnumerator FadeInCoroutine(float speed)
+    public IEnumerator FadeInCoroutine(float speed)
     {
         Color color = fadeViewBlocker.renderer.material.color;
         while (color.a > 0)

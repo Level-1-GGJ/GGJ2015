@@ -51,7 +51,7 @@ public class RandomText : MonoBehaviour {
     {
         mc = GetComponent<MovementController>();
         mc.IsKinematic = true;
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 20f);
     }
 
     /// <summary>

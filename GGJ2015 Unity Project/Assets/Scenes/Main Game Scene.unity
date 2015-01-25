@@ -3525,7 +3525,7 @@ Transform:
   - {fileID: 1362115534}
   - {fileID: 11851662}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!23 &1065281863
 Renderer:
   m_ObjectHideFlags: 0
@@ -4963,7 +4963,7 @@ Transform:
   - {fileID: 1286227164}
   - {fileID: 1845420866}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!61 &1596929022
 BoxCollider2D:
   m_ObjectHideFlags: 0
