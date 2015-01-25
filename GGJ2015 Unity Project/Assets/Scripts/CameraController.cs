@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class CameraController : MonoBehaviour {
-
+    public Vector2 offset = new Vector2(0,1);
     public GameObject fadeViewBlocker;
     GameObject player;
-    float maxDistanceFromPlayer = 1;
+    public float maxDistanceFromPlayer = 3;
     bool camResetStarted = false;
 	// Use this for initialization
 	void Start () {
@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour {
             }
             else
             {
-                transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10);
+                transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10) + (Vector3)offset;
             }
         }
         else
