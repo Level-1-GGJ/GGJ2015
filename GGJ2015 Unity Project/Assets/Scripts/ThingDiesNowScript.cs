@@ -5,10 +5,10 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Rigidbody2D))]
 public class ThingDiesNowScript : MonoBehaviour {
 
-    bool invuln = false;
+    [HideInInspector]
+    public bool invuln = false;
     public float deathTimer = 0;
     public string[] tagsThatKillMe;
-    [HideInInspector]
 
     void OnTriggerEnter2D(Collider2D col)
     {
