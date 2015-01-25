@@ -33,7 +33,7 @@ public class Spawner : MonoBehaviour {
             player = GameObject.FindWithTag("Player");
         }
 
-        if (player && Random.Range(1, frequency+1) == frequency)
+        if (player && frequency != 0 && Random.Range(1, frequency+1) == frequency)
         {
             screenWidthInUnits = (Screen.width / 100f);
             upperScreenY = (Screen.height / 100f);
