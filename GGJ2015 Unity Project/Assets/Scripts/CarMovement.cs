@@ -5,11 +5,8 @@ using System.Collections;
 [RequireComponent(typeof(MovingPlatformScript))]
 public class CarMovement : MonoBehaviour 
 {
-    MovementController mc;
-    MovementController playerMC;
     LightSwitcher orders;
     MovingPlatformScript car;
-    BoxCollider2D carCollider;
 
     public float greenSpeed;
     public float yellowSpeed;
@@ -18,11 +15,8 @@ public class CarMovement : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        mc = GetComponent<MovementController>();
-        playerMC = GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>();
         orders = GameObject.FindGameObjectWithTag("StreetLight").GetComponent<LightSwitcher>();
         car = GameObject.FindGameObjectWithTag("Car").GetComponent<MovingPlatformScript>();
-        carCollider = GameObject.FindGameObjectWithTag("Car").GetComponent<BoxCollider2D>();
 	}
 	
 	// Update is called once per frame

@@ -16,13 +16,11 @@ public class LightSwitcher : MonoBehaviour
     public bool isYellow;
     public bool isRed;
 
-    MovementController mc;
     MovingPlatformScript car;
 
 	// Use this for initialization
 	void Start () 
     {
-        mc = GetComponent<MovementController>();
         car = GameObject.FindGameObjectWithTag("Car").GetComponent<MovingPlatformScript>();
         isGreen = true;
         renderer.material.mainTexture = lights[curLight];

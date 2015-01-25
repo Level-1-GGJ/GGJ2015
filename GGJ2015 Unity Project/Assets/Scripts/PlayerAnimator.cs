@@ -11,14 +11,11 @@ public class PlayerAnimator : MonoBehaviour {
     Animation anim;
     JumpScript jS;
     PlayerMovement pm;
-    MovementController mc;
     ThingDiesNowScript tdns;
-    string lastPlayed = "";
 	// Use this for initialization
 	void Start () {
         jS = GetComponent<JumpScript>();
         pm = GetComponent<PlayerMovement>();
-        mc = GetComponent<MovementController>();
         tdns = GetComponent<ThingDiesNowScript>();
         anim = GetComponentInChildren<Animation>();
 	}
