@@ -2660,7 +2660,7 @@ Transform:
   - {fileID: 476481385}
   - {fileID: 1779311737}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!1 &118844992
 GameObject:
   m_ObjectHideFlags: 0
@@ -3083,8 +3083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsToVisit:
-  - {x: -4.40999985, y: .920000017}
-  - {x: -4.40999985, y: 7.94999981}
+  - {x: 274.349854, y: .467220992}
+  - {x: 274.349854, y: 7.49722099}
   timeToVisitAllPoints: 2
   currentIndex: 0
   onCar: 0
@@ -7365,10 +7365,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsToVisit:
-  - {x: 41.9199982, y: 1.21000004}
-  - {x: 50.7599983, y: 1.21000004}
-  - {x: 50.7599983, y: -1.35000002}
-  - {x: 62.4900017, y: -1.35000002}
+  - {x: 206.520004, y: 2.17000008}
+  - {x: 215.360001, y: 2.17000008}
+  - {x: 215.360001, y: -.389999986}
+  - {x: 227.089996, y: -.389999986}
   timeToVisitAllPoints: 8
   currentIndex: 0
   onCar: 0
@@ -15935,7 +15935,7 @@ Transform:
   - {fileID: 72330040}
   - {fileID: 2076230496}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!61 &788264506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16036,7 +16036,7 @@ Transform:
   m_Children:
   - {fileID: 835967379}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &790663160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20146,7 +20146,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 422468, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 422326, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -20159,6 +20159,102 @@ Prefab:
     - target: {fileID: 6122370, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
       propertyPath: m_Size.y
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422402, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[0].x
+      value: 186.570007
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422402, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[0].y
+      value: 2.17000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422402, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[1].x
+      value: 192.919998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422402, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[1].y
+      value: 2.17000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422456, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[0].y
+      value: 2.17000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422456, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[1].y
+      value: 8.22000027
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422456, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[1].x
+      value: 199.639999
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422456, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[0].x
+      value: 199.639999
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422410, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[0].y
+      value: 2.17000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422410, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[1].y
+      value: 2.17000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422410, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[3].y
+      value: -.389999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422410, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[2].y
+      value: -.389999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422410, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[0].x
+      value: 206.520004
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422410, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[1].x
+      value: 215.360001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422410, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[2].x
+      value: 215.360001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422410, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[3].x
+      value: 227.089996
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422396, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[0].y
+      value: 2.17000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422396, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[1].y
+      value: 2.17000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422396, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[2].y
+      value: -.389999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422396, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[3].y
+      value: -.389999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422396, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[0].x
+      value: 209.990005
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422396, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[1].x
+      value: 218.830002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422396, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[2].x
+      value: 218.830002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422396, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
+      propertyPath: pointsToVisit.Array.data[3].x
+      value: 230.560013
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f18a97aeef5c9b246954ad73d6466b6b, type: 2}
@@ -28008,6 +28104,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11417962, guid: c812b93ed328fd84cb0d90288f274e2c, type: 2}
+      propertyPath: pointsToVisit.Array.data[0].x
+      value: 274.349854
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417962, guid: c812b93ed328fd84cb0d90288f274e2c, type: 2}
+      propertyPath: pointsToVisit.Array.data[1].x
+      value: 274.349854
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417962, guid: c812b93ed328fd84cb0d90288f274e2c, type: 2}
+      propertyPath: pointsToVisit.Array.data[0].y
+      value: .467220992
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417962, guid: c812b93ed328fd84cb0d90288f274e2c, type: 2}
+      propertyPath: pointsToVisit.Array.data[1].y
+      value: 7.49722099
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c812b93ed328fd84cb0d90288f274e2c, type: 2}
   m_RootGameObject: {fileID: 1817804561}
@@ -29837,8 +29949,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsToVisit:
-  - {x: 35.0400009, y: 1.21000004}
-  - {x: 35.0400009, y: 7.26000023}
+  - {x: 199.639999, y: 2.17000008}
+  - {x: 199.639999, y: 8.22000027}
   timeToVisitAllPoints: 4
   currentIndex: 0
   onCar: 0
@@ -32671,10 +32783,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsToVisit:
-  - {x: 45.3899994, y: 1.21000004}
-  - {x: 54.2299995, y: 1.21000004}
-  - {x: 54.2299995, y: -1.35000002}
-  - {x: 65.9600067, y: -1.35000002}
+  - {x: 209.990005, y: 2.17000008}
+  - {x: 218.830002, y: 2.17000008}
+  - {x: 218.830002, y: -.389999986}
+  - {x: 230.560013, y: -.389999986}
   timeToVisitAllPoints: 8
   currentIndex: 0
   onCar: 0
@@ -35218,8 +35330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsToVisit:
-  - {x: 21.9699993, y: 1.21000004}
-  - {x: 28.3199997, y: 1.21000004}
+  - {x: 186.570007, y: 2.17000008}
+  - {x: 192.919998, y: 2.17000008}
   timeToVisitAllPoints: 2
   currentIndex: 0
   onCar: 0
