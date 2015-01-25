@@ -15,7 +15,7 @@ public class ShootBulletInputScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             shooter.FireBullet(transform.right, relativeFirePosition, true);
         }
