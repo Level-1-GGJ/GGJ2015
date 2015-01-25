@@ -204,7 +204,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 263581183}
-  m_Text: The smallest coffins
+  m_Text: Not feeling is no
   m_OffsetZ: 0
   m_CharacterSize: .100000001
   m_LineSpacing: .100000001
@@ -349,7 +349,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 906587457}
-  m_Text: '-Anonymous '
+  m_Text: -Larry Michael Drelda
   m_OffsetZ: 0
   m_CharacterSize: .100000001
   m_LineSpacing: .100000001
@@ -505,7 +505,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328829140}
-  m_Text: You have lost Flight
+  m_Text: You have lost Interaction
   m_OffsetZ: 0
   m_CharacterSize: .100000001
   m_LineSpacing: .100000001
@@ -577,7 +577,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1605310142}
-  m_Text: are the heaviest
+  m_Text: replacement for reality
   m_OffsetZ: 0
   m_CharacterSize: .100000001
   m_LineSpacing: .100000001
