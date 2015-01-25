@@ -190,7 +190,6 @@ GameObject:
   - 33: {fileID: 6064167}
   - 23: {fileID: 6064166}
   - 95: {fileID: 6064165}
-  - 61: {fileID: 6064164}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -198,18 +197,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &6064164
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 60781887}
-  m_GameObject: {fileID: 6064163}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &6064165
 Animator:
   serializedVersion: 3
@@ -488,6 +475,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 736259888}
   m_RootOrder: 0
+--- !u!1 &60665295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 60665297}
+  - 61: {fileID: 60665296}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Floor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &60665296
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 60665295}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 20.75, y: .300000012}
+  m_Center: {x: 0, y: 0}
+--- !u!4 &60665297
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 60665295}
+  m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 60.8899994, y: 7.32000017, z: -2.42000008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 49
 --- !u!1001 &60781887
 Prefab:
   m_ObjectHideFlags: 0
@@ -531,7 +557,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 6064163}
   m_IsPrefabParent: 0
@@ -699,7 +726,6 @@ GameObject:
   - 4: {fileID: 88272238}
   - 33: {fileID: 88272237}
   - 23: {fileID: 88272236}
-  - 61: {fileID: 88272235}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Floor
@@ -707,18 +733,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &88272235
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1813502981}
-  m_GameObject: {fileID: 88272234}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 3.50826812, y: .264503002}
-  m_Center: {x: 0, y: 0}
 --- !u!23 &88272236
 Renderer:
   m_ObjectHideFlags: 0
@@ -759,7 +773,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 50
 --- !u!1 &93756284
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,7 +784,6 @@ GameObject:
   - 4: {fileID: 93756288}
   - 33: {fileID: 93756287}
   - 23: {fileID: 93756286}
-  - 61: {fileID: 93756285}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Floor
@@ -778,18 +791,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &93756285
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a,
-    type: 2}
-  m_PrefabInternal: {fileID: 629556113}
-  m_GameObject: {fileID: 93756284}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 3.50826812, y: .264503002}
-  m_Center: {x: 0, y: 0}
 --- !u!23 &93756286
 Renderer:
   m_ObjectHideFlags: 0
@@ -830,7 +831,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 51
 --- !u!1 &94221840
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,7 +843,6 @@ GameObject:
   - 33: {fileID: 94221844}
   - 23: {fileID: 94221843}
   - 95: {fileID: 94221842}
-  - 61: {fileID: 94221841}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -850,18 +850,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &94221841
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1421816848}
-  m_GameObject: {fileID: 94221840}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &94221842
 Animator:
   serializedVersion: 3
@@ -1284,7 +1272,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1634834285}
   m_IsPrefabParent: 0
@@ -1478,6 +1467,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1420181747}
   m_RootOrder: 12
+--- !u!1 &180588596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 180588598}
+  - 61: {fileID: 180588597}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Floor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &180588597
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 180588596}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!4 &180588598
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 180588596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 52.7000008, y: -2.4000001, z: -3.5}
+  m_LocalScale: {x: 107.749992, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 61
 --- !u!1 &189907083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,7 +1786,6 @@ GameObject:
   - 33: {fileID: 249877166}
   - 23: {fileID: 249877165}
   - 95: {fileID: 249877164}
-  - 61: {fileID: 249877163}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -1766,18 +1793,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &249877163
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 804250181}
-  m_GameObject: {fileID: 249877162}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &249877164
 Animator:
   serializedVersion: 3
@@ -2051,7 +2066,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1211958372}
   m_IsPrefabParent: 0
@@ -2095,7 +2111,6 @@ GameObject:
   - 33: {fileID: 281140658}
   - 23: {fileID: 281140657}
   - 95: {fileID: 281140656}
-  - 61: {fileID: 281140655}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -2103,18 +2118,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &281140655
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1618586296}
-  m_GameObject: {fileID: 281140654}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &281140656
 Animator:
   serializedVersion: 3
@@ -2452,7 +2455,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1632389022}
   m_IsPrefabParent: 0
@@ -2645,6 +2649,45 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .622067332, y: 1.74186802}
   m_Center: {x: .020996213, y: .889003515}
+--- !u!1 &315255019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 315255021}
+  - 61: {fileID: 315255020}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Floor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &315255020
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315255019}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 7, y: .300000012}
+  m_Center: {x: 0, y: 0}
+--- !u!4 &315255021
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315255019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.75, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1698846454}
+  m_RootOrder: 0
 --- !u!1 &323484633
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,13 +2837,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_RootOrder
-      value: 51
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_RootGameObject: {fileID: 2138196688}
   m_IsPrefabParent: 0
@@ -2816,7 +2860,6 @@ GameObject:
   - 33: {fileID: 375162740}
   - 23: {fileID: 375162739}
   - 95: {fileID: 375162738}
-  - 61: {fileID: 375162737}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -2824,18 +2867,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &375162737
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1298690573}
-  m_GameObject: {fileID: 375162736}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &375162738
 Animator:
   serializedVersion: 3
@@ -2964,7 +2995,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 2002566513}
   m_IsPrefabParent: 0
@@ -3218,7 +3250,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_RootOrder
-      value: 55
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_TagString
@@ -3240,7 +3272,6 @@ GameObject:
   - 33: {fileID: 495931528}
   - 23: {fileID: 495931527}
   - 95: {fileID: 495931526}
-  - 61: {fileID: 495931525}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -3248,18 +3279,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &495931525
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 719985900}
-  m_GameObject: {fileID: 495931524}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &495931526
 Animator:
   serializedVersion: 3
@@ -3416,7 +3435,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1811797669}
   m_IsPrefabParent: 0
@@ -3432,7 +3452,6 @@ GameObject:
   - 33: {fileID: 522530969}
   - 23: {fileID: 522530968}
   - 95: {fileID: 522530967}
-  - 61: {fileID: 522530966}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -3440,18 +3459,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &522530966
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1108212236}
-  m_GameObject: {fileID: 522530965}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &522530967
 Animator:
   serializedVersion: 3
@@ -3546,7 +3553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_RootOrder
-      value: 59
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_TagString
@@ -3600,7 +3607,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 2112285220}
   m_IsPrefabParent: 0
@@ -3644,7 +3652,6 @@ GameObject:
   - 33: {fileID: 576502915}
   - 23: {fileID: 576502914}
   - 95: {fileID: 576502913}
-  - 61: {fileID: 576502912}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -3652,18 +3659,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &576502912
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1714296314}
-  m_GameObject: {fileID: 576502911}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &576502913
 Animator:
   serializedVersion: 3
@@ -3764,7 +3759,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 651067855}
   m_IsPrefabParent: 0
@@ -3812,7 +3808,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_RootGameObject: {fileID: 1852578783}
   m_IsPrefabParent: 0
@@ -4014,13 +4011,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_RootOrder
-      value: 50
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_RootGameObject: {fileID: 93756284}
   m_IsPrefabParent: 0
@@ -4090,7 +4088,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_RootOrder
-      value: 53
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_TagString
@@ -4112,7 +4110,6 @@ GameObject:
   - 33: {fileID: 651067859}
   - 23: {fileID: 651067858}
   - 95: {fileID: 651067857}
-  - 61: {fileID: 651067856}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -4120,18 +4117,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &651067856
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 582776782}
-  m_GameObject: {fileID: 651067855}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &651067857
 Animator:
   serializedVersion: 3
@@ -4287,7 +4272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 57
 --- !u!1001 &660129801
 Prefab:
   m_ObjectHideFlags: 0
@@ -4331,7 +4316,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1165182994}
   m_IsPrefabParent: 0
@@ -4507,7 +4493,6 @@ GameObject:
   - 33: {fileID: 673772324}
   - 23: {fileID: 673772323}
   - 95: {fileID: 673772322}
-  - 61: {fileID: 673772321}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -4515,18 +4500,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &673772321
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1149165643}
-  m_GameObject: {fileID: 673772320}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &673772322
 Animator:
   serializedVersion: 3
@@ -4683,7 +4656,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 860587573}
   m_IsPrefabParent: 0
@@ -4743,7 +4717,6 @@ GameObject:
   - 33: {fileID: 714424344}
   - 23: {fileID: 714424343}
   - 95: {fileID: 714424342}
-  - 61: {fileID: 714424341}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -4751,18 +4724,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &714424341
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 769514314}
-  m_GameObject: {fileID: 714424340}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &714424342
 Animator:
   serializedVersion: 3
@@ -4863,7 +4824,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 495931524}
   m_IsPrefabParent: 0
@@ -4934,7 +4896,6 @@ GameObject:
   - 33: {fileID: 743557452}
   - 23: {fileID: 743557451}
   - 95: {fileID: 743557450}
-  - 61: {fileID: 743557449}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -4942,18 +4903,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &743557449
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1323964132}
-  m_GameObject: {fileID: 743557448}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &743557450
 Animator:
   serializedVersion: 3
@@ -5082,7 +5031,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1423701345}
   m_IsPrefabParent: 0
@@ -5214,7 +5164,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 714424340}
   m_IsPrefabParent: 0
@@ -5289,7 +5240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_RootOrder: 56
 --- !u!1 &793563147
 GameObject:
   m_ObjectHideFlags: 0
@@ -5466,7 +5417,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 249877162}
   m_IsPrefabParent: 0
@@ -5514,7 +5466,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 941111685}
   m_IsPrefabParent: 0
@@ -5584,7 +5537,6 @@ GameObject:
   - 33: {fileID: 838306808}
   - 23: {fileID: 838306807}
   - 95: {fileID: 838306806}
-  - 61: {fileID: 838306805}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -5592,18 +5544,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &838306805
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1963326463}
-  m_GameObject: {fileID: 838306804}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &838306806
 Animator:
   serializedVersion: 3
@@ -5752,7 +5692,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_RootGameObject: {fileID: 1603282474}
   m_IsPrefabParent: 0
@@ -5768,7 +5709,6 @@ GameObject:
   - 33: {fileID: 860587577}
   - 23: {fileID: 860587576}
   - 95: {fileID: 860587575}
-  - 61: {fileID: 860587574}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -5776,18 +5716,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &860587574
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 680644157}
-  m_GameObject: {fileID: 860587573}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &860587575
 Animator:
   serializedVersion: 3
@@ -5856,7 +5784,6 @@ GameObject:
   - 33: {fileID: 862167673}
   - 23: {fileID: 862167672}
   - 95: {fileID: 862167671}
-  - 61: {fileID: 862167670}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -5864,18 +5791,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &862167670
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1223304527}
-  m_GameObject: {fileID: 862167669}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &862167671
 Animator:
   serializedVersion: 3
@@ -6003,7 +5918,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 60
 --- !u!1 &871763659
 GameObject:
   m_ObjectHideFlags: 0
@@ -6160,7 +6075,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1923422216}
   m_IsPrefabParent: 0
@@ -6290,7 +6206,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 55
 --- !u!1 &941111685
 GameObject:
   m_ObjectHideFlags: 0
@@ -6302,7 +6218,6 @@ GameObject:
   - 33: {fileID: 941111689}
   - 23: {fileID: 941111688}
   - 95: {fileID: 941111687}
-  - 61: {fileID: 941111686}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -6310,18 +6225,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &941111686
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 810847037}
-  m_GameObject: {fileID: 941111685}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &941111687
 Animator:
   serializedVersion: 3
@@ -6521,7 +6424,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
       propertyPath: m_RootOrder
-      value: 57
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
       propertyPath: m_TagString
@@ -6569,7 +6472,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_RootOrder
-      value: 54
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_TagString
@@ -6623,7 +6526,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1986017156}
   m_IsPrefabParent: 0
@@ -6751,7 +6655,6 @@ GameObject:
   - 33: {fileID: 1045067559}
   - 23: {fileID: 1045067558}
   - 95: {fileID: 1045067557}
-  - 61: {fileID: 1045067556}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -6759,18 +6662,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1045067556
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1718792335}
-  m_GameObject: {fileID: 1045067555}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1045067557
 Animator:
   serializedVersion: 3
@@ -6865,13 +6756,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_RootOrder
-      value: 52
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_RootGameObject: {fileID: 2022381861}
   m_IsPrefabParent: 0
@@ -6947,7 +6839,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 522530965}
   m_IsPrefabParent: 0
@@ -7083,7 +6976,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1230049238}
   m_IsPrefabParent: 0
@@ -7161,7 +7055,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 673772320}
   m_IsPrefabParent: 0
@@ -7337,7 +7232,6 @@ GameObject:
   - 33: {fileID: 1165182998}
   - 23: {fileID: 1165182997}
   - 95: {fileID: 1165182996}
-  - 61: {fileID: 1165182995}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -7345,18 +7239,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1165182995
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 660129801}
-  m_GameObject: {fileID: 1165182994}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1165182996
 Animator:
   serializedVersion: 3
@@ -7453,7 +7335,6 @@ GameObject:
   - 33: {fileID: 1211958376}
   - 23: {fileID: 1211958375}
   - 95: {fileID: 1211958374}
-  - 61: {fileID: 1211958373}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -7461,18 +7342,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1211958373
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 274953613}
-  m_GameObject: {fileID: 1211958372}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1211958374
 Animator:
   serializedVersion: 3
@@ -7573,7 +7442,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1427640594}
   m_IsPrefabParent: 0
@@ -7704,7 +7574,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 862167669}
   m_IsPrefabParent: 0
@@ -7853,7 +7724,6 @@ GameObject:
   - 33: {fileID: 1230049242}
   - 23: {fileID: 1230049241}
   - 95: {fileID: 1230049240}
-  - 61: {fileID: 1230049239}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -7861,18 +7731,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1230049239
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1115421225}
-  m_GameObject: {fileID: 1230049238}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1230049240
 Animator:
   serializedVersion: 3
@@ -8128,7 +7986,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 375162736}
   m_IsPrefabParent: 0
@@ -8258,7 +8117,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1775803504}
   m_IsPrefabParent: 0
@@ -8306,7 +8166,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 743557448}
   m_IsPrefabParent: 0
@@ -8377,7 +8238,6 @@ GameObject:
   - 33: {fileID: 1362465643}
   - 23: {fileID: 1362465642}
   - 95: {fileID: 1362465641}
-  - 61: {fileID: 1362465640}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -8385,18 +8245,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1362465640
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1778742848}
-  m_GameObject: {fileID: 1362465639}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1362465641
 Animator:
   serializedVersion: 3
@@ -8674,7 +8522,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 57
+  m_RootOrder: 58
 --- !u!1 &1408180929
 GameObject:
   m_ObjectHideFlags: 0
@@ -9087,7 +8935,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 94221840}
   m_IsPrefabParent: 0
@@ -9103,7 +8952,6 @@ GameObject:
   - 33: {fileID: 1423701349}
   - 23: {fileID: 1423701348}
   - 95: {fileID: 1423701347}
-  - 61: {fileID: 1423701346}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -9111,18 +8959,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1423701346
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 751473038}
-  m_GameObject: {fileID: 1423701345}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1423701347
 Animator:
   serializedVersion: 3
@@ -9191,7 +9027,6 @@ GameObject:
   - 33: {fileID: 1427640598}
   - 23: {fileID: 1427640597}
   - 95: {fileID: 1427640596}
-  - 61: {fileID: 1427640595}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -9199,18 +9034,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1427640595
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1215847402}
-  m_GameObject: {fileID: 1427640594}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1427640596
 Animator:
   serializedVersion: 3
@@ -9390,7 +9213,6 @@ GameObject:
   - 33: {fileID: 1598880770}
   - 23: {fileID: 1598880769}
   - 95: {fileID: 1598880768}
-  - 61: {fileID: 1598880767}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -9398,18 +9220,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1598880767
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1797464571}
-  m_GameObject: {fileID: 1598880766}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1598880768
 Animator:
   serializedVersion: 3
@@ -9477,7 +9287,6 @@ GameObject:
   - 4: {fileID: 1603282478}
   - 33: {fileID: 1603282477}
   - 23: {fileID: 1603282476}
-  - 61: {fileID: 1603282475}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Floor
@@ -9485,18 +9294,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1603282475
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a,
-    type: 2}
-  m_PrefabInternal: {fileID: 860476725}
-  m_GameObject: {fileID: 1603282474}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 3.50826812, y: .264503002}
-  m_Center: {x: 0, y: 0}
 --- !u!23 &1603282476
 Renderer:
   m_ObjectHideFlags: 0
@@ -9654,7 +9451,6 @@ GameObject:
   - 33: {fileID: 1617069055}
   - 23: {fileID: 1617069054}
   - 95: {fileID: 1617069053}
-  - 61: {fileID: 1617069052}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -9662,18 +9458,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1617069052
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 2112770415}
-  m_GameObject: {fileID: 1617069051}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1617069053
 Animator:
   serializedVersion: 3
@@ -9774,7 +9558,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 281140654}
   m_IsPrefabParent: 0
@@ -9849,7 +9634,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 58
+  m_RootOrder: 59
 --- !u!1 &1632389022
 GameObject:
   m_ObjectHideFlags: 0
@@ -9861,7 +9646,6 @@ GameObject:
   - 33: {fileID: 1632389026}
   - 23: {fileID: 1632389025}
   - 95: {fileID: 1632389024}
-  - 61: {fileID: 1632389023}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -9869,18 +9653,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1632389023
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 284296654}
-  m_GameObject: {fileID: 1632389022}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1632389024
 Animator:
   serializedVersion: 3
@@ -9949,7 +9721,6 @@ GameObject:
   - 33: {fileID: 1634834289}
   - 23: {fileID: 1634834288}
   - 95: {fileID: 1634834287}
-  - 61: {fileID: 1634834286}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -9957,18 +9728,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1634834286
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 153694627}
-  m_GameObject: {fileID: 1634834285}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1634834287
 Animator:
   serializedVersion: 3
@@ -10286,7 +10045,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
   m_LocalPosition: {x: 62.4900017, y: -1.35000002, z: -2.42000008}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 315255021}
   m_Father: {fileID: 0}
   m_RootOrder: 46
 --- !u!1001 &1714296314
@@ -10332,7 +10092,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 576502911}
   m_IsPrefabParent: 0
@@ -10380,7 +10141,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1045067555}
   m_IsPrefabParent: 0
@@ -10729,7 +10491,6 @@ GameObject:
   - 33: {fileID: 1775803508}
   - 23: {fileID: 1775803507}
   - 95: {fileID: 1775803506}
-  - 61: {fileID: 1775803505}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -10737,18 +10498,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1775803505
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1316220549}
-  m_GameObject: {fileID: 1775803504}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1775803506
 Animator:
   serializedVersion: 3
@@ -10849,7 +10598,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1362465639}
   m_IsPrefabParent: 0
@@ -10897,7 +10647,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1598880766}
   m_IsPrefabParent: 0
@@ -10941,7 +10692,6 @@ GameObject:
   - 33: {fileID: 1811797673}
   - 23: {fileID: 1811797672}
   - 95: {fileID: 1811797671}
-  - 61: {fileID: 1811797670}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -10949,18 +10699,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1811797670
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 519750047}
-  m_GameObject: {fileID: 1811797669}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1811797671
 Animator:
   serializedVersion: 3
@@ -11055,13 +10793,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_RootOrder
-      value: 49
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b53e6929e6ea8324490baae39899943a, type: 2}
   m_RootGameObject: {fileID: 88272234}
   m_IsPrefabParent: 0
@@ -11103,7 +10842,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_RootOrder
-      value: 56
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_TagString
@@ -11152,7 +10891,6 @@ GameObject:
   - 4: {fileID: 1852578787}
   - 33: {fileID: 1852578786}
   - 23: {fileID: 1852578785}
-  - 61: {fileID: 1852578784}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Floor
@@ -11160,18 +10898,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1852578784
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a,
-    type: 2}
-  m_PrefabInternal: {fileID: 608473606}
-  m_GameObject: {fileID: 1852578783}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 3.50826812, y: .264503002}
-  m_Center: {x: 0, y: 0}
 --- !u!23 &1852578785
 Renderer:
   m_ObjectHideFlags: 0
@@ -11390,7 +11116,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_RootOrder
-      value: 58
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 196294, guid: b53e6929e6ea8324490baae39899943a, type: 2}
       propertyPath: m_TagString
@@ -11590,7 +11316,6 @@ GameObject:
   - 33: {fileID: 1923422220}
   - 23: {fileID: 1923422219}
   - 95: {fileID: 1923422218}
-  - 61: {fileID: 1923422217}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -11598,18 +11323,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1923422217
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 900124690}
-  m_GameObject: {fileID: 1923422216}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1923422218
 Animator:
   serializedVersion: 3
@@ -11783,7 +11496,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 54
 --- !u!1 &1946583897
 GameObject:
   m_ObjectHideFlags: 0
@@ -11911,7 +11624,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 838306804}
   m_IsPrefabParent: 0
@@ -12118,7 +11832,6 @@ GameObject:
   - 33: {fileID: 1986017160}
   - 23: {fileID: 1986017159}
   - 95: {fileID: 1986017158}
-  - 61: {fileID: 1986017157}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -12126,18 +11839,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1986017157
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 987365771}
-  m_GameObject: {fileID: 1986017156}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &1986017158
 Animator:
   serializedVersion: 3
@@ -12353,7 +12054,6 @@ GameObject:
   - 33: {fileID: 2002566517}
   - 23: {fileID: 2002566516}
   - 95: {fileID: 2002566515}
-  - 61: {fileID: 2002566514}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -12361,18 +12061,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &2002566514
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 407531782}
-  m_GameObject: {fileID: 2002566513}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &2002566515
 Animator:
   serializedVersion: 3
@@ -12524,7 +12212,6 @@ GameObject:
   - 4: {fileID: 2022381865}
   - 33: {fileID: 2022381864}
   - 23: {fileID: 2022381863}
-  - 61: {fileID: 2022381862}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Floor
@@ -12532,18 +12219,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &2022381862
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1054023154}
-  m_GameObject: {fileID: 2022381861}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 3.50826812, y: .264503002}
-  m_Center: {x: 0, y: 0}
 --- !u!23 &2022381863
 Renderer:
   m_ObjectHideFlags: 0
@@ -12584,7 +12259,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 53
 --- !u!1 &2047256737
 GameObject:
   m_ObjectHideFlags: 0
@@ -12812,7 +12487,6 @@ GameObject:
   - 33: {fileID: 2112285224}
   - 23: {fileID: 2112285223}
   - 95: {fileID: 2112285222}
-  - 61: {fileID: 2112285221}
   m_Layer: 0
   m_Name: Backwall
   m_TagString: Floor
@@ -12820,18 +12494,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &2112285221
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 538782525}
-  m_GameObject: {fileID: 2112285220}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 5.97920322, y: .183353424}
-  m_Center: {x: 0, y: .00053024292}
 --- !u!95 &2112285222
 Animator:
   serializedVersion: 3
@@ -12932,7 +12594,8 @@ Prefab:
       propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6158558, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ce012218afc389c4890bbda4a5d537e4, type: 2}
   m_RootGameObject: {fileID: 1617069051}
   m_IsPrefabParent: 0
@@ -13098,7 +12761,6 @@ GameObject:
   - 4: {fileID: 2138196692}
   - 33: {fileID: 2138196691}
   - 23: {fileID: 2138196690}
-  - 61: {fileID: 2138196689}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Floor
@@ -13106,18 +12768,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &2138196689
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6196294, guid: b53e6929e6ea8324490baae39899943a,
-    type: 2}
-  m_PrefabInternal: {fileID: 357791456}
-  m_GameObject: {fileID: 2138196688}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 3.50826812, y: .264503002}
-  m_Center: {x: 0, y: 0}
 --- !u!23 &2138196690
 Renderer:
   m_ObjectHideFlags: 0
@@ -13158,7 +12808,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 52
 --- !u!1001 &2143132725
 Prefab:
   m_ObjectHideFlags: 0

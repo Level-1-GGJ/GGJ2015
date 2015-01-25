@@ -340,7 +340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &315468275
 Renderer:
   m_ObjectHideFlags: 0
@@ -550,8 +550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80a6a85c72ebf84980849bbe044fe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsToWait: 3
-  nextScene: Tutorial Scene
+  secondsToWait: 6
+  nextScene: Main Menu
 --- !u!1 &1328911709
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +737,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 127714, guid: 4bcf5cca37082574485ae8714bca788f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bcf5cca37082574485ae8714bca788f, type: 2}
