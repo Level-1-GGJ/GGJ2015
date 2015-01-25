@@ -204,14 +204,14 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 263581183}
-  m_Text: The smallest coffins
+  m_Text: In the english language there are orphans
   m_OffsetZ: 0
   m_CharacterSize: .100000001
   m_LineSpacing: .100000001
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 150
+  m_FontSize: 100
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -324,6 +324,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 11036289}
   m_RootOrder: 0
+--- !u!1 &622220334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 177290, guid: d675925a115704547a69799e93d96f39, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 622220337}
+  - 23: {fileID: 622220336}
+  - 102: {fileID: 622220335}
+  m_Layer: 0
+  m_Name: Stuff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!102 &622220335
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 10277290, guid: d675925a115704547a69799e93d96f39,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 622220334}
+  m_Text: -Jodi Picoult, My Sister's Keeper
+  m_OffsetZ: 0
+  m_CharacterSize: .100000001
+  m_LineSpacing: .100000001
+  m_Anchor: 4
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 100
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &622220336
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2377290, guid: d675925a115704547a69799e93d96f39,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 622220334}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!4 &622220337
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 477290, guid: d675925a115704547a69799e93d96f39, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 622220334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.5, z: -.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &906587457
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,14 +421,14 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 906587457}
-  m_Text: '-Anonymous '
+  m_Text: the parent who loses a child
   m_OffsetZ: 0
   m_CharacterSize: .100000001
   m_LineSpacing: .100000001
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 150
+  m_FontSize: 100
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -505,7 +577,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328829140}
-  m_Text: You have lost Flight
+  m_Text: You have lost Invulnerability
   m_OffsetZ: 0
   m_CharacterSize: .100000001
   m_LineSpacing: .100000001
@@ -547,11 +619,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328829140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.29999995, z: -.5}
+  m_LocalPosition: {x: 0, y: -2.51999998, z: -.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1605310142
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,14 +649,14 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1605310142}
-  m_Text: are the heaviest
+  m_Text: and widows, but there is no word for
   m_OffsetZ: 0
   m_CharacterSize: .100000001
   m_LineSpacing: .100000001
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 150
+  m_FontSize: 100
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
