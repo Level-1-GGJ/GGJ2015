@@ -14,9 +14,9 @@ public class JumpScript : MonoBehaviour {
     public bool canFirstJump = false;
 
     public bool canJump = false;
-
     public bool jumpButtonPressed = false;
 
+    public int jumpCount = 0;
 	// Use this for initialization
 	void Start () {
         mc = GetComponent<MovementController>();
@@ -35,6 +35,7 @@ public class JumpScript : MonoBehaviour {
 	void FixedUpdate () {
         if (!pm.dashing && jumpButtonPressed)
         {
+            jumpCount++;
             jumpButtonPressed = false;
             mc.SetVelocityY(0);
             mc.AddForce(Vector2.up * jumpHeight * 10);
@@ -53,6 +54,7 @@ public class JumpScript : MonoBehaviour {
     {
         if (col.gameObject.CompareTag("Floor") || col.gameObject.CompareTag("Car"))
         {
+            jumpCount = 0;
             canFirstJump = true;
             canJump = true;
         }
@@ -64,6 +66,7 @@ public class JumpScript : MonoBehaviour {
         {
             canFirstJump = false;
             if (!hasDoubleJump) canJump = false;
+            if (jumpCount == 0) jumpCount++;
         }
     }
 }

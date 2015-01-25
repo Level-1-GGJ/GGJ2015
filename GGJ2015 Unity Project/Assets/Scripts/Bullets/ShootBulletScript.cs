@@ -6,7 +6,6 @@ public class ShootBulletScript : MonoBehaviour {
 
     public TextState textState;
     public GameObject bulletPrefab;
-    public string[] ignoreTags;
     Rigidbody2D rb;
 
     void Start()

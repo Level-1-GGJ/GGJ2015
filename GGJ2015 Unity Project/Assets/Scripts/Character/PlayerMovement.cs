@@ -27,8 +27,8 @@ public class PlayerMovement : MonoBehaviour
 	float cooldownTimer;
 	float resetTimer;
 
-    bool APressed = false;
-    bool DPressed = false;
+    public bool APressed = false;
+    public bool DPressed = false;
 	bool lastLeft =false;
 
     public Vector2 relativeDeathVelocity = new Vector2(-.1f, 4f);

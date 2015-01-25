@@ -1,0 +1,64 @@
+﻿using UnityEngine;
+using System.Collections;
+
+[RequireComponent(typeof(JumpScript))]
+[RequireComponent(typeof(ThingDiesNowScript))]
+public class PlayerAnimator : MonoBehaviour {
+
+    public GameObject book;
+
+    bool died = false;
+    Animation anim;
+    JumpScript jS;
+    PlayerMovement pm;
+    MovementController mc;
+    ThingDiesNowScript tdns;
+    string lastPlayed = "";
+	// Use this for initialization
+	void Start () {
+        jS = GetComponent<JumpScript>();
+        pm = GetComponent<PlayerMovement>();
+        mc = GetComponent<MovementController>();
+        tdns = GetComponent<ThingDiesNowScript>();
+        anim = GetComponentInChildren<Animation>();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        book.SetActive(false);
+        if (died)
+        {
+            anim.Play("Death");
+        }
+        else if (pm.flying)
+        {
+            anim.Play("Flight");
+        }
+        else if (tdns.invuln)
+        {
+            anim.Play("Protection");
+            book.SetActive(true);
+        }
+        else if (pm.dashing)
+        {
+            anim.Play("Dash");
+        }
+        else if (jS.jumpCount > 0)
+        {
+            anim.Play("Jump " + jS.jumpCount);
+        }
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            anim.Play("Walk");
+        }
+        else
+        {
+            anim.Play("Idle");
+        }
+	}
+
+    void PrepForDeath()
+    {
+        died = true;
+    }
+}
