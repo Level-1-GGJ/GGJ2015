@@ -3,7 +3,7 @@ using System.Collections;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class LevelEndManager : MonoBehaviour {
-    string nextScene;
+    public string nextScene;
 	// Use this for initialization
 	void Start () {
         collider2D.isTrigger = true;

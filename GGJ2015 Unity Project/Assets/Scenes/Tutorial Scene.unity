@@ -11001,9 +11001,6 @@ GameObject:
   - 4: {fileID: 2134381440}
   - 61: {fileID: 2134381439}
   - 114: {fileID: 2134381438}
-  - 50: {fileID: 2134381443}
-  - 114: {fileID: 2134381442}
-  - 114: {fileID: 2134381441}
   m_Layer: 0
   m_Name: Level End
   m_TagString: Untagged
@@ -11022,6 +11019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8153fcb1801198e4989e16c7f614d1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: Baby Quote Scene
 --- !u!61 &2134381439
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11045,48 +11043,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
---- !u!114 &2134381441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2134381437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7cdd27920d89aa418696dd350a2ddea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedInstance: {fileID: 0}
-  frequency: 50
-  player: {fileID: 0}
---- !u!114 &2134381442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2134381437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc4dd8413f1ce441aead911b6a5350e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textState: 0
-  bulletPrefab: {fileID: 177290, guid: d675925a115704547a69799e93d96f39, type: 2}
---- !u!50 &2134381443
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2134381437}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
 --- !u!1 &2135706099
 GameObject:
   m_ObjectHideFlags: 0
