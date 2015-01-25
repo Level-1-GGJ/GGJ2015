@@ -14298,7 +14298,7 @@ Transform:
   - {fileID: 72330040}
   - {fileID: 2076230496}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!61 &788264506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14379,7 +14379,6 @@ GameObject:
   - 114: {fileID: 790663162}
   - 114: {fileID: 790663161}
   - 114: {fileID: 790663160}
-  - 114: {fileID: 790663169}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Player
@@ -14488,7 +14487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: .100000001
   canControl: 1
-  flying: 1
+  flying: 0
   resetTimerValue: .5
   cooldownTimerValue: 1
   maxDashTime: .300000012
@@ -14539,18 +14538,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .622067332, y: 1.74186802}
   m_Center: {x: .020996213, y: .889003515}
---- !u!114 &790663169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11474194, guid: edbde70256eb3844d80432d287aab69d,
-    type: 2}
-  m_PrefabInternal: {fileID: 892044110}
-  m_GameObject: {fileID: 790663158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f15cdd3e2af4e44697c9b0c98e8e26a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &799567836
 GameObject:
   m_ObjectHideFlags: 0
@@ -15737,6 +15724,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11429752, guid: d6598e01f96ea1742a7b1734d9643910, type: 2}
+      propertyPath: nextScene
+      value: Alcoholism Quote Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6598e01f96ea1742a7b1734d9643910, type: 2}
   m_RootGameObject: {fileID: 1672984200}
@@ -16557,7 +16548,12 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11460352, guid: edbde70256eb3844d80432d287aab69d, type: 2}
+      propertyPath: flying
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11474194, guid: edbde70256eb3844d80432d287aab69d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: edbde70256eb3844d80432d287aab69d, type: 2}
   m_RootGameObject: {fileID: 790663158}
   m_IsPrefabParent: 0
@@ -33246,7 +33242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8153fcb1801198e4989e16c7f614d1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Baby Quote Scene
+  nextScene: Alcoholism Quote Scene
 --- !u!61 &1672984202
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33270,7 +33266,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!1 &1673090613
 GameObject:
   m_ObjectHideFlags: 0
@@ -35704,7 +35700,7 @@ Transform:
   - {fileID: 799567837}
   - {fileID: 1957331979}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &1825685133
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,7 +35,7 @@ public class PanelInteraction : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.CompareTag ("Player"))
+		if (col.CompareTag ("Player") || Application.loadedLevel < 5)
 		{
 			canUse = true;
 		}
