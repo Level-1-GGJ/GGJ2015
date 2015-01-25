@@ -9,6 +9,9 @@ public class LightMovement : MonoBehaviour
 
     public Vector2 rightBound;
     public Vector2 leftBound;
+    public Vector2 topBound;
+    public Vector2 bottomBound;
+    public Vector2 bufferZone;
 
 	// Use this for initialization
 	void Start () 
@@ -25,6 +28,11 @@ public class LightMovement : MonoBehaviour
         {
             //Debug.Log("the light moves");
             mc.Position = new Vector2(playerController.Position.x,mc.Position.y);
+        }
+        if (playerController.Position.y < topBound.y && playerController.Position.y > bottomBound.y)
+        {
+            Debug.Log("move up");
+            mc.Position = new Vector2(mc.Position.x, playerController.Position.y+bufferZone.y);
         }
 	}
 }

@@ -1629,6 +1629,18 @@ Prefab:
       propertyPath: rightBound.x
       value: 155
       objectReference: {fileID: 0}
+    - target: {fileID: 11475584, guid: 995238f8233c66c46b1fdadc72e6f513, type: 2}
+      propertyPath: bottomBound.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475584, guid: 995238f8233c66c46b1fdadc72e6f513, type: 2}
+      propertyPath: topBound.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475584, guid: 995238f8233c66c46b1fdadc72e6f513, type: 2}
+      propertyPath: bufferZone.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 995238f8233c66c46b1fdadc72e6f513, type: 2}
   m_RootGameObject: {fileID: 1065281861}
@@ -3525,7 +3537,7 @@ Transform:
   - {fileID: 1362115534}
   - {fileID: 11851662}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!23 &1065281863
 Renderer:
   m_ObjectHideFlags: 0
@@ -3584,6 +3596,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightBound: {x: 155, y: 0}
   leftBound: {x: 17, y: 0}
+  topBound: {x: 0, y: 5}
+  bottomBound: {x: 0, y: -1}
+  bufferZone: {x: 0, y: 3}
 --- !u!114 &1065281866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4963,7 +4978,7 @@ Transform:
   - {fileID: 1286227164}
   - {fileID: 1845420866}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!61 &1596929022
 BoxCollider2D:
   m_ObjectHideFlags: 0
