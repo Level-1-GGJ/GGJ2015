@@ -67,6 +67,11 @@ public class MovingPlatformScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        if(col.collider.tag == "Floor")
+        {
+            return;
+        }
+
         if (Vector2.Dot((col.transform.position - transform.position), Vector2.up) > collider2D.bounds.extents.y / 2)
         {
             col.transform.parent = transform;
@@ -76,6 +81,11 @@ public class MovingPlatformScript : MonoBehaviour {
 
     void OnCollisionExit2D(Collision2D col)
     {
+        if (col.collider.tag == "Floor")
+        {
+            return;
+        }
+
         if (col.transform.parent == transform)
         {
             col.transform.parent = null;
