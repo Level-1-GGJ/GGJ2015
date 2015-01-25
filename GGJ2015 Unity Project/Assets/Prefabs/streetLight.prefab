@@ -14,6 +14,9 @@ GameObject:
   - 114: {fileID: 11475586}
   - 33: {fileID: 3375592}
   - 23: {fileID: 2375592}
+  - 114: {fileID: 11433280}
+  - 114: {fileID: 11433282}
+  - 114: {fileID: 11433284}
   m_Layer: 0
   m_Name: streetLight
   m_TagString: StreetLight
@@ -79,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.0230007, y: 3.43670011, z: -5.65829992}
+  m_LocalPosition: {x: 23.8070793, y: 3.41243196, z: -3.18173742}
   m_LocalScale: {x: .645941019, y: .645941377, z: .645941377}
   m_Children:
   - {fileID: 475588}
@@ -270,6 +273,47 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11433280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce25477d47c65cf469ac790a239f1896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenSpawnRate: 0
+  yellowSpawnRate: 300
+  redSpawnRate: 240
+--- !u!114 &11433282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc4dd8413f1ce441aead911b6a5350e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textState: 0
+  bulletPrefab: {fileID: 177290, guid: d675925a115704547a69799e93d96f39, type: 2}
+--- !u!114 &11433284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cdd27920d89aa418696dd350a2ddea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedInstance: {fileID: 0}
+  frequency: 0
+  player: {fileID: 0}
 --- !u!114 &11475582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,8 +336,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21eb5562702a8354b8dfeed18cb507cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightBound: {x: 34, y: 0}
+  rightBound: {x: 155, y: 0}
   leftBound: {x: 17, y: 0}
+  topBound: {x: 0, y: 5}
+  bottomBound: {x: 0, y: -1}
+  bufferZone: {x: 0, y: 3}
 --- !u!114 &11475586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,7 +356,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: e25f02d1a4cccb549b9b0ffcf890f303, type: 3}
   - {fileID: 2800000, guid: fc07f552a413b6e4daba1553c3791ff5, type: 3}
   - {fileID: 2800000, guid: a1f1a54032e4a1d4787bdb5659992939, type: 3}
-  greenTime: 1
+  greenTime: 6
   yellowTime: 1
   redTime: 1
   curLight: 0
