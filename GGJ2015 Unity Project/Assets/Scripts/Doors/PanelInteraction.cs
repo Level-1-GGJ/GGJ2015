@@ -40,6 +40,7 @@ public class PanelInteraction : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
+        keyPressed = Input.GetKeyDown(KeyCode.E);
 		if (col.CompareTag ("Player"))
 		{
 			canUse = true;
