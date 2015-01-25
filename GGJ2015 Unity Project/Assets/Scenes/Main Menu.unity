@@ -421,7 +421,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: f210ff83e45dec14d945380a509c0bb1, type: 2}
+  - {fileID: 2100000, guid: 3c28c6f2d23927c4798a539731f22fc6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -456,8 +456,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1274398626}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 941, y: 200, z: -879}
-  m_LocalScale: {x: 1000, y: 1, z: 100}
+  m_LocalPosition: {x: 591.799988, y: 288.100006, z: -879}
+  m_LocalScale: {x: 14.9416447, y: .170017302, z: 17.0017319}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -486,7 +486,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 0
-  m_Color: {r: .258823544, g: .517647088, b: .952941179, a: 1}
+  m_Color: {r: .949019611, g: .431372553, b: .129411772, a: 1}
   m_Intensity: 1.90999997
   m_Range: 100
   m_SpotAngle: 67

@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsToWait: 3
-  nextScene: Tutorial Scene
+  nextScene: Main Game Scene 4
 --- !u!1 &1328829140
 GameObject:
   m_ObjectHideFlags: 0
