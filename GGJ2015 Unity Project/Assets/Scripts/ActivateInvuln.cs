@@ -7,6 +7,9 @@ public class ActivateInvuln : MonoBehaviour {
     bool dead = false;
     PlayerMovement pm;
     ThingDiesNowScript tdns;
+    bool wasInvincible = false;
+    public GameObject Aura;
+    public GameObject currentAura;
 	// Use this for initialization
 	void Start () {
         pm = GetComponent<PlayerMovement>();
@@ -21,9 +24,19 @@ public class ActivateInvuln : MonoBehaviour {
             {
                 pm.canControl = false;
                 tdns.invuln = true;
+                if (!wasInvincible)
+                {
+                    currentAura = GameObject.Instantiate(Aura, this.gameObject.transform.position, Quaternion.identity) as GameObject;
+                }
+                wasInvincible = true;
             }
             else
             {
+                if (wasInvincible)
+                {
+                    wasInvincible = false;
+                    Destroy(currentAura);
+                }
                 pm.canControl = true;
                 tdns.invuln = false;
             }
