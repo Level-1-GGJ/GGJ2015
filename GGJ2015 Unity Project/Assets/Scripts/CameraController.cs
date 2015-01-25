@@ -15,32 +15,26 @@ public class CameraController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (!camResetStarted)
+    void Update()
+    {
+        if (player)
         {
-<<<<<<< HEAD
-            if (Vector2.Distance(player.transform.position, transform.position) > maxDistanceFromPlayer && !camResetStarted)
-=======
-            if (player)
->>>>>>> fbadd35cb7b8a524be510af19f883df6aa9c2f98
+            if (Vector2.Distance(player.transform.position, transform.position) > maxDistanceFromPlayer)
             {
-                if (Vector2.Distance(player.transform.position, transform.position) > maxDistanceFromPlayer)
-                {
-                    camResetStarted = true;
-                    StopAllCoroutines();
-                    StartCoroutine(CameraReset());
-                }
-                else
-                {
-                    transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10) + (Vector3)offset;
-                }
+                camResetStarted = true;
+                StopAllCoroutines();
+                StartCoroutine(CameraReset());
             }
             else
             {
-                player = GameObject.FindWithTag("Player");
+                transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10) + (Vector3)offset;
             }
         }
-	}
+        else
+        {
+            player = GameObject.FindWithTag("Player");
+        }
+    }
 
     IEnumerator CameraReset()
     {
