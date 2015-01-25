@@ -28,14 +28,19 @@ public class Spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        screenWidthInUnits = (Screen.width / 100f);
-        upperScreenY = (Screen.height / 100f);
-        lowerScreenY = -upperScreenY;
-
-        if (Random.Range(1, frequency+1) == frequency)
+        if (!player)
         {
-            shoot.FireBullet(player.transform.position, -Vector2.right, new Vector2(screenWidthInUnits, Random.Range(lowerScreenY, upperScreenY)), false).textSpeed = .2f;
+            player = GameObject.FindWithTag("Player");
+        }
+
+        if (player && Random.Range(1, frequency+1) == frequency)
+        {
+            screenWidthInUnits = (Screen.width / 100f);
+            upperScreenY = (Screen.height / 100f);
+            lowerScreenY = -upperScreenY;
+            RandomText t = shoot.FireBullet(player.transform.position, -Vector2.right, new Vector2(screenWidthInUnits, Random.Range(lowerScreenY, upperScreenY)), false);
+            t.textSpeed = .2f;
+            t.tag = "Deadly";
         }
 	}
 }
