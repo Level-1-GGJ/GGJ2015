@@ -20,8 +20,10 @@ public class LightMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
+        //Debug.Log("made it to the light");
         if (playerController.Position.x < rightBound.x && playerController.Position.x > leftBound.x)
         {
+            //Debug.Log("the light moves");
             mc.Position = new Vector2(playerController.Position.x,mc.Position.y);
         }
 	}

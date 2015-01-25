@@ -18,7 +18,6 @@ public class CameraController : MonoBehaviour {
 	void Update () {
         if (player)
         {
-            Debug.Log(Vector2.Distance(player.transform.position, transform.position));
             if (Vector2.Distance(player.transform.position, transform.position) > maxDistanceFromPlayer && !camResetStarted)
             {
                 camResetStarted = true;
