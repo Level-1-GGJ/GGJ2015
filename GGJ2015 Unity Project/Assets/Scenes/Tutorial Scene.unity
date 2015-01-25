@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f15cdd3e2af4e44697c9b0c98e8e26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Aura: {fileID: 0}
+  Aura: {fileID: 196214, guid: c6d5eef4f119b964b92c097320f9c72b, type: 2}
   currentAura: {fileID: 0}
 --- !u!1 &252018853
 GameObject:
@@ -4286,6 +4286,10 @@ Prefab:
     - target: {fileID: 11460352, guid: edbde70256eb3844d80432d287aab69d, type: 2}
       propertyPath: canFly
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460352, guid: edbde70256eb3844d80432d287aab69d, type: 2}
+      propertyPath: shifting
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edbde70256eb3844d80432d287aab69d, type: 2}

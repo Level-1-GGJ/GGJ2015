@@ -3035,6 +3035,8 @@ MonoBehaviour:
   APressed: 0
   DPressed: 0
   shifting: 0
+  canFly: 0
+  canActuallyDash: 0
   relativeDeathVelocity: {x: -.100000001, y: 4}
 --- !u!114 &11460354
 MonoBehaviour:
@@ -3116,6 +3118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f15cdd3e2af4e44697c9b0c98e8e26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Aura: {fileID: 196214, guid: c6d5eef4f119b964b92c097320f9c72b, type: 2}
+  currentAura: {fileID: 0}
 --- !u!137 &13760362
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
