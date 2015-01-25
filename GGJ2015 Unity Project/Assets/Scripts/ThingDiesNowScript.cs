@@ -8,6 +8,7 @@ public class ThingDiesNowScript : MonoBehaviour {
     bool invuln = false;
     public float deathTimer = 0;
     public string[] tagsThatKillMe;
+    [HideInInspector]
 
     void OnTriggerEnter2D(Collider2D col)
     {
