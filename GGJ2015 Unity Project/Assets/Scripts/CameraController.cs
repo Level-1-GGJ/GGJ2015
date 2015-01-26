@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour {
             }
             else
             {
-                transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -10) + (Vector3)offset;
+                transform.position = new Vector3(player.transform.position.x, player.transform.position.y, -20) + (Vector3)offset;
             }
         }
         else
