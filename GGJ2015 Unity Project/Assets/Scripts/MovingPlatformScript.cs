@@ -7,8 +7,13 @@ public class MovingPlatformScript : MonoBehaviour {
 
     public Vector2[] pointsToVisit;
     public float timeToVisitAllPoints = 1;
-
-    MovementController mc;
+	private MovementController mc;
+	
+    public MovementController MC
+	{
+		get { return mc; }
+		set { mc = value; }
+	}
     float speed = 0;
     int lastIndex;
     public int currentIndex;
@@ -29,6 +34,7 @@ public class MovingPlatformScript : MonoBehaviour {
         lastIndex = 0;
         currentIndex = 1;
         currentDirection = (pointsToVisit[currentIndex] - pointsToVisit[lastIndex]).normalized;
+		onCar = false;
 	}
 
     // Update is called once per frame
@@ -63,9 +69,7 @@ public class MovingPlatformScript : MonoBehaviour {
                 mc2.SetVelocityX(0);
                 mc2.Move(currentDirection * speed);
             }
-        }
-        
-        
+		} 
 	}
 
     void OnCollisionEnter2D(Collision2D col)

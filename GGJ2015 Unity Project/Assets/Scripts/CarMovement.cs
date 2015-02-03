@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(MovementController))]
@@ -7,6 +7,7 @@ public class CarMovement : MonoBehaviour
 {
     LightSwitcher orders;
     MovingPlatformScript car;
+	Vector3 originalPos;
 
     public float greenSpeed;
     public float yellowSpeed;
@@ -44,5 +45,10 @@ public class CarMovement : MonoBehaviour
             //Debug.Log("off car");
             car.timeToVisitAllPoints = 0;
         }
+		if (!car.onCar) 
+		{
+			car.MC.Position=originalPos;
+			car.MC.Position= new Vector2(car.MC.Position.x, car.MC.Position.y-1.2f);
+		}
 	}
 }
